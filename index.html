@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrowthHex Digital – Services & Pricing | Jaipur</title>
+    <meta name="description" content="Transparent pricing for GrowthHex Digital services: Google Business Profile management, custom websites, WhatsApp AI automation, Meta Ads, and SEO in Jaipur.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --bg-deep:      #0a0d14;
+            --bg-card:      #111827;
+            --bg-glass:     rgba(17, 24, 39, 0.75);
+            --border:       rgba(255,255,255,0.07);
+            --border-glow:  rgba(249, 115, 22, 0.35);
+            --accent:       #f97316;
+            --accent-2:     #fb923c;
+            --accent-glow:  rgba(249, 115, 22, 0.15);
+            --green:        #22c55e;
+            --blue:         #38bdf8;
+            --purple:       #a78bfa;
+            --text-primary: #f1f5f9;
+            --text-muted:   #94a3b8;
+            --text-dim:     #475569;
+            --gradient-hero: linear-gradient(135deg, #f97316 0%, #fb923c 40%, #fdba74 100%);
+            --gradient-card: linear-gradient(145deg, rgba(249,115,22,0.08) 0%, rgba(0,0,0,0) 60%);
+            --radius:       16px;
+            --radius-lg:    24px;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-deep);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* ─── Scrollbar ─── */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: var(--bg-deep); }
+        ::-webkit-scrollbar-thumb { background: #374151; border-radius: 3px; }
+
+        /* ─── Noise Overlay ─── */
+        body::before {
+            content: '';
+            position: fixed; inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.025;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* ─── NAV ─── */
+        nav {
+            position: sticky; top: 0; z-index: 100;
+            background: rgba(10, 13, 20, 0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            padding: 0 clamp(16px, 5vw, 64px);
+        }
+        .nav-inner {
+            max-width: 1280px; margin: 0 auto;
+            display: flex; align-items: center; justify-content: space-between;
+            height: 64px;
+        }
+        .nav-logo {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800; font-size: 1.35rem;
+            background: var(--gradient-hero);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            letter-spacing: -0.5px;
+        }
+        .nav-links { display: flex; align-items: center; gap: 8px; }
+        .nav-links button {
+            background: none; border: none; cursor: pointer;
+            color: var(--text-muted); font-size: 0.85rem; font-weight: 500;
+            padding: 8px 14px; border-radius: 8px;
+            transition: color 0.2s, background 0.2s;
+            font-family: 'Inter', sans-serif;
+        }
+        .nav-links button:hover { color: var(--text-primary); background: rgba(255,255,255,0.05); }
+        .nav-links .nav-cta {
+            background: var(--accent); color: #fff;
+            padding: 8px 18px; border-radius: 10px;
+        }
+        .nav-links .nav-cta:hover { background: var(--accent-2); color: #fff; }
+        .nav-hamburger {
+            display: none; background: none; border: none; cursor: pointer;
+            color: var(--text-primary); font-size: 1.5rem;
+        }
+
+        /* ─── MAIN WRAPPER ─── */
+        main { max-width: 1280px; margin: 0 auto; padding: 0 clamp(16px, 5vw, 64px); position: relative; z-index: 1; }
+
+        /* ─── HERO ─── */
+        .hero {
+            text-align: center;
+            padding: 80px 0 64px;
+            position: relative;
+        }
+        .hero-glow {
+            position: absolute; top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px; height: 300px;
+            background: radial-gradient(ellipse, rgba(249,115,22,0.12) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: rgba(249,115,22,0.1);
+            border: 1px solid rgba(249,115,22,0.25);
+            color: var(--accent-2); font-size: 0.75rem; font-weight: 600;
+            padding: 6px 14px; border-radius: 100px;
+            margin-bottom: 24px; letter-spacing: 0.5px; text-transform: uppercase;
+        }
+        .hero h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900; line-height: 1.05;
+            letter-spacing: -2px; margin-bottom: 20px;
+        }
+        .hero h1 .highlight {
+            background: var(--gradient-hero);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        .hero p {
+            font-size: 1.1rem; color: var(--text-muted);
+            max-width: 560px; margin: 0 auto 36px; line-height: 1.7;
+        }
+        .hero-tags {
+            display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;
+        }
+        .hero-tag {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid var(--border);
+            color: var(--text-muted); font-size: 0.78rem; font-weight: 500;
+            padding: 6px 14px; border-radius: 100px;
+            transition: border-color 0.2s, color 0.2s;
+        }
+        .hero-tag:hover { border-color: var(--accent); color: var(--accent-2); }
+
+        /* ─── SECTION HEADER ─── */
+        .section-header { margin-bottom: 40px; }
+        .section-label {
+            font-size: 0.7rem; font-weight: 700; letter-spacing: 2px;
+            text-transform: uppercase; color: var(--accent);
+            margin-bottom: 10px;
+        }
+        .section-header h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+            font-weight: 800; letter-spacing: -1px;
+            color: var(--text-primary);
+        }
+        .section-header p { color: var(--text-muted); margin-top: 10px; max-width: 540px; }
+
+        /* ─── SECTION SPACING ─── */
+        section { padding: 72px 0; }
+        section + section { border-top: 1px solid var(--border); }
+
+        /* ─── TABS ─── */
+        .tab-bar {
+            display: flex; gap: 8px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border);
+            border-radius: 16px; padding: 8px;
+            margin-bottom: 40px;
+            overflow-x: auto;
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* IE 10+ */
+        }
+        .tab-bar::-webkit-scrollbar {
+            display: none; /* Safari and Chrome */
+        }
+        .tab-btn {
+            flex: 1 0 auto;
+            background: rgba(255, 255, 255, 0.01);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            cursor: pointer;
+            color: var(--text-muted); font-size: 0.88rem; font-weight: 600;
+            padding: 12px 20px; border-radius: 12px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            white-space: nowrap;
+            font-family: 'Inter', sans-serif;
+            display: flex; align-items: center; justify-content: center; gap: 8px;
+        }
+        .tab-btn:hover {
+            color: var(--text-primary);
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-1px);
+        }
+        .tab-btn:active {
+            transform: translateY(1px);
+        }
+        .tab-btn.active {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+            color: #fff;
+            border-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 20px rgba(249, 115, 22, 0.3);
+        }
+        .tab-btn span.tab-icon {
+            display: inline-block;
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .tab-btn:hover span.tab-icon, .tab-btn.active span.tab-icon {
+            transform: scale(1.18) rotate(8deg);
+        }
+
+        /* ─── SERVICE CARDS ─── */
+        #service-content {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px; transition: opacity 0.25s;
+        }
+        .service-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg); padding: 28px;
+            position: relative; overflow: hidden;
+            transition: border-color 0.3s, transform 0.25s, box-shadow 0.25s;
+        }
+        .service-card::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: var(--gradient-card);
+            pointer-events: none;
+        }
+        .service-card:hover {
+            border-color: var(--border-glow);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+        .service-card.featured {
+            border-color: rgba(249,115,22,0.4);
+            box-shadow: 0 0 0 1px rgba(249,115,22,0.15) inset;
+        }
+        .service-card .card-tier {
+            font-size: 0.68rem; font-weight: 700; letter-spacing: 1.5px;
+            text-transform: uppercase; color: var(--accent); margin-bottom: 6px;
+        }
+        .service-card .card-price {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.9rem; font-weight: 800; color: var(--text-primary);
+            margin-bottom: 4px; letter-spacing: -1px;
+        }
+        .service-card .card-price-sub {
+            font-size: 0.78rem; color: var(--text-dim); margin-bottom: 20px;
+        }
+        .original-price {
+            text-decoration: line-through; color: var(--text-dim);
+            font-size: 1.1rem; margin-right: 8px;
+        }
+        .service-card ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+        .service-card ul li {
+            display: flex; align-items: flex-start; gap: 10px;
+            font-size: 0.85rem; color: var(--text-muted); line-height: 1.4;
+        }
+        .service-card ul li .check {
+            flex-shrink: 0; width: 18px; height: 18px;
+            background: rgba(34,197,94,0.12); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.6rem; color: var(--green); margin-top: 1px;
+        }
+        .featured-badge {
+            background: var(--accent); color: #fff;
+            font-size: 0.65rem; font-weight: 700;
+            padding: 3px 10px; border-radius: 100px; letter-spacing: 0.5px;
+            display: inline-block;
+        }
+        .hosting-note {
+            margin-top: 14px; padding: 10px 14px;
+            background: rgba(56,189,248,0.06);
+            border: 1px solid rgba(56,189,248,0.2);
+            border-radius: 10px;
+            font-size: 0.78rem; color: #7dd3fc; line-height: 1.5;
+        }
+
+        /* ─── WHATSAPP AI FEATURE SECTION ─── */
+        .wa-feature {
+            background: linear-gradient(135deg, rgba(34,197,94,0.08) 0%, rgba(249,115,22,0.06) 100%);
+            border: 1px solid rgba(34,197,94,0.2);
+            border-radius: var(--radius-lg); padding: 48px;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
+            align-items: center; position: relative; overflow: hidden;
+        }
+        .wa-feature::before {
+            content: '🤖';
+            position: absolute; right: -20px; bottom: -20px;
+            font-size: 10rem; opacity: 0.04;
+        }
+        .wa-feature .wa-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: rgba(34,197,94,0.12);
+            border: 1px solid rgba(34,197,94,0.3);
+            color: var(--green); font-size: 0.72rem; font-weight: 700;
+            padding: 5px 12px; border-radius: 100px;
+            margin-bottom: 18px; text-transform: uppercase; letter-spacing: 1px;
+        }
+        .wa-feature h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 800; letter-spacing: -0.5px;
+            margin-bottom: 14px;
+        }
+        .wa-feature p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 20px; }
+        .wa-pricing-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius); padding: 32px;
+            text-align: center;
+        }
+        .wa-pricing-box .offer { color: var(--text-dim); font-size: 0.8rem; margin-bottom: 8px; }
+        .wa-pricing-box .price-old {
+            font-size: 1.4rem; color: var(--text-dim);
+            text-decoration: line-through; font-family: 'Outfit', sans-serif;
+            margin-bottom: 4px;
+        }
+        .wa-pricing-box .price-new {
+            font-family: 'Outfit', sans-serif;
+            font-size: 3rem; font-weight: 900; letter-spacing: -2px;
+            background: linear-gradient(135deg, #22c55e, #4ade80);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            margin-bottom: 6px;
+        }
+        .wa-pricing-box .price-note { color: var(--text-dim); font-size: 0.78rem; margin-bottom: 20px; }
+        .wa-pricing-box .wa-cta {
+            display: block; width: 100%;
+            background: linear-gradient(135deg, #16a34a, #22c55e);
+            color: #fff; font-weight: 700; font-size: 0.9rem;
+            padding: 13px 24px; border-radius: 10px;
+            border: none; cursor: pointer;
+            transition: opacity 0.2s, transform 0.2s;
+            font-family: 'Inter', sans-serif;
+        }
+        .wa-pricing-box .wa-cta:hover { opacity: 0.9; transform: translateY(-1px); }
+
+        /* ─── CHART SECTION ─── */
+        .chart-wrap {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg); padding: 32px;
+        }
+        .chart-inner-grid {
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 48px; align-items: center;
+        }
+        .chart-container {
+            position: relative; width: 100%;
+            max-width: 640px; margin: 0 auto;
+            height: 320px;
+        }
+
+        /* ─── PACKAGES ─── */
+        .packages-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+        .pkg-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg); padding: 32px;
+            display: flex; flex-direction: column;
+            position: relative; overflow: hidden;
+            transition: border-color 0.3s, transform 0.25s, box-shadow 0.25s;
+        }
+        .pkg-card:hover {
+            border-color: var(--border-glow);
+            transform: translateY(-6px);
+            box-shadow: 0 24px 48px rgba(0,0,0,0.5);
+        }
+        .pkg-card.popular {
+            border-color: rgba(249,115,22,0.45);
+            background: linear-gradient(145deg, rgba(249,115,22,0.07) 0%, var(--bg-card) 50%);
+        }
+        .pkg-card.elite {
+            border-color: rgba(167,139,250,0.4);
+            background: linear-gradient(145deg, rgba(167,139,250,0.07) 0%, var(--bg-card) 50%);
+        }
+        .pkg-card.wa-pkg {
+            border-color: rgba(34,197,94,0.4);
+            background: linear-gradient(145deg, rgba(34,197,94,0.07) 0%, var(--bg-card) 50%);
+        }
+        .pkg-badge {
+            display: inline-block;
+            font-size: 0.65rem; font-weight: 700; letter-spacing: 1px;
+            text-transform: uppercase; padding: 4px 10px;
+            border-radius: 100px;
+        }
+        .card-header-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 16px;
+            width: 100%;
+        }
+        .pkg-badge.badge-orange { background: rgba(249,115,22,0.15); color: var(--accent); }
+        .pkg-badge.badge-gray   { background: rgba(255,255,255,0.06); color: var(--text-muted); }
+        .pkg-badge.badge-purple { background: rgba(167,139,250,0.15); color: #c4b5fd; }
+        .pkg-badge.badge-green  { background: rgba(34,197,94,0.15); color: var(--green); }
+        .pkg-badge.badge-dark   { background: rgba(255,255,255,0.04); color: var(--text-dim); }
+        .pkg-card h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.4rem; font-weight: 800; margin-bottom: 6px; letter-spacing: -0.5px;
+        }
+        .pkg-card .pkg-desc { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 20px; line-height: 1.5; }
+        .pkg-card .pkg-price {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.2rem; font-weight: 900; letter-spacing: -1.5px;
+            margin-bottom: 4px;
+        }
+        .pkg-card .pkg-price-note { font-size: 0.78rem; color: var(--text-dim); margin-bottom: 24px; }
+        .pkg-card .pkg-features { list-style: none; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+        .pkg-card .pkg-features li {
+            display: flex; align-items: flex-start; gap: 10px;
+            font-size: 0.83rem; color: var(--text-muted); line-height: 1.4;
+        }
+        .pkg-card .pkg-features .dot {
+            flex-shrink: 0; width: 6px; height: 6px;
+            border-radius: 50%; margin-top: 6px;
+        }
+        .dot-orange { background: var(--accent); }
+        .dot-green  { background: var(--green); }
+        .dot-purple { background: #a78bfa; }
+        .dot-blue   { background: var(--blue); }
+        .pkg-card .pkg-cta {
+            display: block; width: 100%; margin-top: 28px;
+            padding: 13px; border-radius: 12px;
+            font-weight: 700; font-size: 0.88rem;
+            border: none; cursor: pointer;
+            transition: all 0.25s; font-family: 'Inter', sans-serif;
+        }
+        .cta-orange { background: var(--accent); color: #fff; }
+        .cta-orange:hover { background: var(--accent-2); transform: translateY(-1px); }
+        .cta-outline { background: transparent; color: var(--text-primary); border: 1px solid rgba(255,255,255,0.12); }
+        .cta-outline:hover { background: rgba(255,255,255,0.06); }
+        .cta-purple { background: rgba(167,139,250,0.2); color: #c4b5fd; border: 1px solid rgba(167,139,250,0.3); }
+        .cta-purple:hover { background: rgba(167,139,250,0.3); }
+        .cta-green { background: linear-gradient(135deg, #16a34a, #22c55e); color: #fff; }
+        .cta-green:hover { opacity: 0.9; transform: translateY(-1px); }
+
+        .popular-badge {
+            background: var(--accent); color: #fff;
+            font-size: 0.65rem; font-weight: 700;
+            padding: 4px 10px; border-radius: 100px;
+            display: inline-block;
+        }
+
+        /* ─── NOTICE BOX ─── */
+        .notice-strip {
+            background: rgba(56,189,248,0.05);
+            border: 1px solid rgba(56,189,248,0.15);
+            border-radius: 12px; padding: 16px 24px;
+            font-size: 0.82rem; color: #7dd3fc;
+            margin-bottom: 32px; line-height: 1.6;
+        }
+        .notice-strip strong { color: #38bdf8; }
+
+        /* ─── FOOTER ─── */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 40px 0; text-align: center;
+            position: relative; z-index: 1;
+        }
+        footer .footer-logo {
+            font-family: 'Outfit', sans-serif; font-weight: 900; font-size: 1.5rem;
+            background: var(--gradient-hero);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            margin-bottom: 12px;
+        }
+        footer p { color: var(--text-dim); font-size: 0.8rem; line-height: 1.7; max-width: 600px; margin: 0 auto; }
+
+        /* ─── RESPONSIVE ─── */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .nav-hamburger { display: block; }
+            .wa-feature { grid-template-columns: 1fr; padding: 28px; gap: 28px; }
+            .tab-bar {
+                padding: 6px;
+                gap: 6px;
+                border-radius: 12px;
+                scroll-snap-type: x mandatory;
+            }
+            .tab-btn {
+                padding: 10px 16px;
+                font-size: 0.8rem;
+                border-radius: 10px;
+                scroll-snap-align: start;
+            }
+            .chart-inner-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+            .chart-container {
+                height: 260px;
+            }
+            .chart-wrap {
+                padding: 24px 16px;
+            }
+        }
+
+        /* ─── ANIMATIONS ─── */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        .fade-up { animation: fadeUp 0.5s ease forwards; }
+
+        /* ─── SAVINGS TAG ─── */
+        .savings-tag {
+            display: inline-flex; align-items: center; gap: 4px;
+            background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.25);
+            color: var(--green); font-size: 0.7rem; font-weight: 700;
+            padding: 3px 10px; border-radius: 100px; margin-left: 10px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ═══ NAV ═══ -->
+    <nav>
+        <div class="nav-inner">
+            <div class="nav-logo">GrowthHex•Digital</div>
+            <div class="nav-links" id="navLinks">
+                <button onclick="scrollToSection('services')">Services</button>
+                <button onclick="scrollToSection('whatsapp-ai')">WhatsApp AI</button>
+                <button onclick="scrollToSection('verticals')">Niches</button>
+                <button onclick="scrollToSection('visuals')">Growth Chart</button>
+                <button onclick="scrollToSection('packages')" class="nav-cta">View Packages →</button>
+            </div>
+            <button class="nav-hamburger" onclick="toggleNav()">☰</button>
+        </div>
+    </nav>
+
+    <!-- ═══ MAIN ═══ -->
+    <main>
+
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero-glow"></div>
+            <div class="hero-badge">🚀 Jaipur's AI-Driven Digital Growth Partner</div>
+            <h1>
+                Smart Digital Services.<br>
+                <span class="highlight">Built to Dominate.</span>
+            </h1>
+            <p>
+                Custom-coded websites, Google Business dominance, WhatsApp AI automation, performance marketing — no WordPress, no bloat, just measurable results.
+            </p>
+            <div class="hero-tags">
+                <span class="hero-tag">⚡ Ultra-Fast Static Websites</span>
+                <span class="hero-tag">🛡️ Secure Dynamic Apps</span>
+                <span class="hero-tag">🤖 WhatsApp AI Agents</span>
+                <span class="hero-tag">📈 Meta Ads & SEO</span>
+                <span class="hero-tag">📍 Google Business Profile</span>
+            </div>
+        </section>
+
+        <!-- SERVICE EXPLORER -->
+        <section id="services">
+            <div class="section-header">
+                <div class="section-label">Individual Services</div>
+                <h2>Service Intelligence Matrix</h2>
+                <p>Explore tiers and deliverables. Select a category to see what's included.</p>
+            </div>
+
+            <div class="tab-bar" id="tabBar">
+                <button class="tab-btn active" onclick="switchTab('gmb')" id="tab-gmb"><span class="tab-icon">📍</span> Google Business Profile</button>
+                <button class="tab-btn" onclick="switchTab('static')" id="tab-static"><span class="tab-icon">🌐</span> Static Websites</button>
+                <button class="tab-btn" onclick="switchTab('dynamic')" id="tab-dynamic"><span class="tab-icon">⚙️</span> Dynamic Apps</button>
+                <button class="tab-btn" onclick="switchTab('meta')" id="tab-meta"><span class="tab-icon">📣</span> Meta Ads</button>
+                <button class="tab-btn" onclick="switchTab('seo')" id="tab-seo"><span class="tab-icon">🔍</span> SEO Mastery</button>
+                <button class="tab-btn" onclick="switchTab('docs')" id="tab-docs"><span class="tab-icon">📄</span> Business Docs</button>
+            </div>
+
+            <div id="service-content"></div>
+        </section>
+
+        <!-- WHATSAPP AI SECTION -->
+        <section id="whatsapp-ai">
+            <div class="section-header">
+                <div class="section-label">New Service • AI Automation</div>
+                <h2>WhatsApp AI 24/7 Sales Support</h2>
+                <p>Automate customer conversations, qualify leads and close sales — even while you sleep.</p>
+            </div>
+
+            <div class="wa-feature">
+                <div>
+                    <div class="wa-badge">✅ Done-For-You Setup</div>
+                    <h3>WhatsApp AI 24/7 Sales Support & Automation</h3>
+                    <p>
+                        A complete WhatsApp Business account setup with an AI agent trained specifically on your business — your services, pricing, FAQs, and real customer scenarios. The agent handles customer queries, qualifies leads, answers objections, and routes hot prospects to you automatically.
+                    </p>
+                    <ul style="list-style:none; display:flex; flex-direction:column; gap:10px;">
+                        <li style="display:flex; align-items:flex-start; gap:10px; font-size:0.88rem; color:var(--text-muted);">
+                            <span class="check" style="flex-shrink:0; width:20px; height:20px; background:rgba(34,197,94,0.12); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:0.65rem; color:var(--green); margin-top:1px;">✓</span>
+                            WhatsApp Business API account setup & verification
+                        </li>
+                        <li style="display:flex; align-items:flex-start; gap:10px; font-size:0.88rem; color:var(--text-muted);">
+                            <span class="check" style="flex-shrink:0; width:20px; height:20px; background:rgba(34,197,94,0.12); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:0.65rem; color:var(--green); margin-top:1px;">✓</span>
+                            AI trained on your services, pricing, FAQs & customer scenarios
+                        </li>
+                        <li style="display:flex; align-items:flex-start; gap:10px; font-size:0.88rem; color:var(--text-muted);">
+                            <span class="check" style="flex-shrink:0; width:20px; height:20px; background:rgba(34,197,94,0.12); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:0.65rem; color:var(--green); margin-top:1px;">✓</span>
+                            Automated customer responses & intelligent lead qualification
+                        </li>
+                        <li style="display:flex; align-items:flex-start; gap:10px; font-size:0.88rem; color:var(--text-muted);">
+                            <span class="check" style="flex-shrink:0; width:20px; height:20px; background:rgba(34,197,94,0.12); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:0.65rem; color:var(--green); margin-top:1px;">✓</span>
+                            24/7 sales support — no human required after setup
+                        </li>
+                        <li style="display:flex; align-items:flex-start; gap:10px; font-size:0.88rem; color:var(--text-muted);">
+                            <span class="check" style="flex-shrink:0; width:20px; height:20px; background:rgba(34,197,94,0.12); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:0.65rem; color:var(--green); margin-top:1px;">✓</span>
+                            Human handover triggers for high-intent conversations
+                        </li>
+                        <li style="display:flex; align-items:flex-start; gap:10px; font-size:0.88rem; color:var(--text-muted);">
+                            <span class="check" style="flex-shrink:0; width:20px; height:20px; background:rgba(34,197,94,0.12); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:0.65rem; color:var(--green); margin-top:1px;">✓</span>
+                            One-time setup — your AI agent, your asset
+                        </li>
+                    </ul>
+                </div>
+                <div class="wa-pricing-box">
+                    <div class="offer">Launch Offer Price</div>
+                    <div class="price-old">₹7,000</div>
+                    <div class="price-new">₹4,999</div>
+                    <div class="price-note">One-time setup fee</div>
+                    <button class="wa-cta" onclick="window.open('https://wa.me/917742064233?text=Hi%2C+I%27m+interested+in+WhatsApp+AI+Automation+Setup','_blank')">
+                        🤖 Get My AI Agent Set Up
+                    </button>
+                    <div style="margin-top:14px; font-size:0.72rem; color:var(--text-dim); line-height:1.5;">
+                        Includes full setup, training & handover.<br>No monthly fee for the setup itself.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GROWTH CHART -->
+        <section id="visuals">
+            <div class="section-header">
+                <div class="section-label">Data Visualization</div>
+                <h2>Visualizing Your Growth Path</h2>
+                <p>Each tier unlocks exponentially more reach, authority and revenue potential.</p>
+            </div>
+            <div class="chart-wrap">
+                <div class="chart-inner-grid">
+                    <div>
+                        <div style="display:flex; flex-direction:column; gap:16px;">
+                            <div style="display:flex; align-items:flex-start; gap:14px;">
+                                <div style="flex-shrink:0; width:32px; height:32px; background:rgba(249,115,22,0.15); border-radius:8px; display:flex; align-items:center; justify-content:center; font-family:'Outfit',sans-serif; font-weight:800; color:var(--accent); font-size:0.9rem;">1</div>
+                                <div>
+                                    <div style="font-weight:600; font-size:0.9rem; margin-bottom:2px;">Foundation</div>
+                                    <div style="font-size:0.8rem; color:var(--text-muted);">Establish visibility, fix errors, local rankings.</div>
+                                </div>
+                            </div>
+                            <div style="display:flex; align-items:flex-start; gap:14px;">
+                                <div style="flex-shrink:0; width:32px; height:32px; background:rgba(249,115,22,0.15); border-radius:8px; display:flex; align-items:center; justify-content:center; font-family:'Outfit',sans-serif; font-weight:800; color:var(--accent); font-size:0.9rem;">2</div>
+                                <div>
+                                    <div style="font-weight:600; font-size:0.9rem; margin-bottom:2px;">Growth</div>
+                                    <div style="font-size:0.8rem; color:var(--text-muted);">Aggressive content, backlinks & lead gen funnels.</div>
+                                </div>
+                            </div>
+                            <div style="display:flex; align-items:flex-start; gap:14px;">
+                                <div style="flex-shrink:0; width:32px; height:32px; background:rgba(249,115,22,0.15); border-radius:8px; display:flex; align-items:center; justify-content:center; font-family:'Outfit',sans-serif; font-weight:800; color:var(--accent); font-size:0.9rem;">3</div>
+                                <div>
+                                    <div style="font-weight:600; font-size:0.9rem; margin-bottom:2px;">Dominance</div>
+                                    <div style="font-size:0.8rem; color:var(--text-muted);">High-volume targets, AI workflows, market supremacy.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="growthChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TARGETED LOCAL VERTICALS -->
+        <section id="verticals">
+            <div class="section-header">
+                <div class="section-label">Niche Expertise</div>
+                <h2>Specialized Local Verticals</h2>
+                <p>We tailor our local SEO, keyword mapping, and custom web assets for Jaipur's top business categories.</p>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; background: rgba(255,255,255,0.02); border: 1px solid var(--border); padding: 32px; border-radius: var(--radius-lg);">
+                <span class="hero-tag" style="border-color: rgba(249,115,22,0.25); color: var(--text-primary); font-size: 0.85rem; padding: 8px 16px;">✈️ Tour & Travels</span>
+                <span class="hero-tag" style="border-color: rgba(249,115,22,0.25); color: var(--text-primary); font-size: 0.85rem; padding: 8px 16px;">🎉 Event Management</span>
+                <span class="hero-tag" style="border-color: rgba(249,115,22,0.25); color: var(--text-primary); font-size: 0.85rem; padding: 8px 16px;">🎈 Balloon Decoration</span>
+                <span class="hero-tag" style="border-color: rgba(249,115,22,0.25); color: var(--text-primary); font-size: 0.85rem; padding: 8px 16px;">💧 RO Service</span>
+                <span class="hero-tag" style="border-color: rgba(249,115,22,0.25); color: var(--text-primary); font-size: 0.85rem; padding: 8px 16px;">❄️ AC Repair</span>
+                <span class="hero-tag" style="border-color: rgba(249,115,22,0.25); color: var(--text-primary); font-size: 0.85rem; padding: 8px 16px;">🚗 Self Drive Cars</span>
+                <span class="hero-tag" style="border-color: rgba(249,115,22,0.25); color: var(--text-primary); font-size: 0.85rem; padding: 8px 16px;">🎓 Colleges & Schools</span>
+                <span class="hero-tag" style="border-color: rgba(249,115,22,0.25); color: var(--text-primary); font-size: 0.85rem; padding: 8px 16px;">💄 Makeup Artists</span>
+                <span class="hero-tag" style="border-color: rgba(249,115,22,0.25); color: var(--text-primary); font-size: 0.85rem; padding: 8px 16px;">🎨 Tattoo Artists</span>
+                <span class="hero-tag" style="border-color: rgba(249,115,22,0.25); color: var(--text-primary); font-size: 0.85rem; padding: 8px 16px;">🦷 Dental Clinics</span>
+                <span class="hero-tag" style="border-color: rgba(249,115,22,0.25); color: var(--text-primary); font-size: 0.85rem; padding: 8px 16px;">🔧 Car Garages</span>
+                <span class="hero-tag" style="border-color: rgba(249,115,22,0.25); color: var(--text-primary); font-size: 0.85rem; padding: 8px 16px;">🌱 Homeopathic Clinics</span>
+                <span class="hero-tag" style="border-color: rgba(249,115,22,0.25); color: var(--text-primary); font-size: 0.85rem; padding: 8px 16px;">☕ Cafes</span>
+                <span class="hero-tag" style="border-color: rgba(249,115,22,0.25); color: var(--text-primary); font-size: 0.85rem; padding: 8px 16px;">🏥 Physiotherapists</span>
+                <span class="hero-tag" style="border-color: rgba(249,115,22,0.25); color: var(--text-primary); font-size: 0.85rem; padding: 8px 16px;">💪 Gyms</span>
+                <span class="hero-tag" style="border-color: rgba(249,115,22,0.25); color: var(--text-primary); font-size: 0.85rem; padding: 8px 16px;">💃 Dance Schools</span>
+                <span class="hero-tag" style="border-color: rgba(249,115,22,0.25); color: var(--text-primary); font-size: 0.85rem; padding: 8px 16px;">🧘 Yoga Classes</span>
+                <span class="hero-tag" style="border-color: rgba(249,115,22,0.25); color: var(--text-primary); font-size: 0.85rem; padding: 8px 16px;">📐 Interior Designers</span>
+                <span class="hero-tag" style="border-color: rgba(249,115,22,0.25); color: var(--text-primary); font-size: 0.85rem; padding: 8px 16px;">☀️ Solar Panel Companies</span>
+                <span class="hero-tag" style="border-color: rgba(249,115,22,0.25); color: var(--text-primary); font-size: 0.85rem; padding: 8px 16px;">🏨 Hotels & Resorts</span>
+            </div>
+        </section>
+
+        <!-- PACKAGES -->
+        <section id="packages">
+            <div class="section-header">
+                <div class="section-label">Core Website & SEO Bundles</div>
+                <h2>Website & SEO Only Packages</h2>
+                <p>Pure development + continuous SEO. Perfect for organic search rankings without paid ad campaigns or social media management.</p>
+            </div>
+
+            <div class="packages-grid">
+
+                <!-- PKG 1: 3-Month Website & Local SEO Core -->
+                <div class="pkg-card">
+                    <div class="card-header-row">
+                        <span class="pkg-badge badge-gray">SEO Core · 3 Months</span>
+                    </div>
+                    <h3>3-Month Website & Local SEO Core</h3>
+                    <p class="pkg-desc">Build your local digital asset with active Google Business SEO foundation.</p>
+                    <div style="margin-bottom: 16px;">
+                        <span class="original-price" style="text-decoration: line-through; color: var(--text-dim); font-size: 0.9rem;">₹25,000</span>
+                        <span class="savings-tag" style="background: rgba(34,197,94,0.15); color: var(--green); padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 600; margin-left: 8px;">Save ₹3,500 (14% Off)</span>
+                    </div>
+                    <div class="pkg-price" style="color:var(--accent); margin-bottom: 2px;">₹21,500 <span style="font-size:1rem; color:var(--text-dim); font-weight:500;">total pack</span></div>
+                    <div class="pkg-price-note">Billed as ₹7,166 / month</div>
+                    <ul class="pkg-features">
+                        <li><span class="dot dot-blue"></span>1-Page Custom Static Website (Value: ₹7,000)</li>
+                        <li><span class="dot dot-blue"></span>3 Months Local / GBP SEO (Value: ₹18,000)</li>
+                        <li><span class="dot dot-blue"></span><strong>Inclusions:</strong> 1-page HTML5/CSS3 custom site, GMB/Local SEO optimizations (15 local keywords, 8-10 posts/mo, review monitoring, local citations)</li>
+                    </ul>
+                    <button class="pkg-cta cta-outline" onclick="window.open('https://wa.me/917742064233?text=Hi%2C+I%27m+interested+in+the+3-Month+Website+%26+Local+SEO+Core+Package','_blank')">Get Started →</button>
+                </div>
+
+                <!-- PKG 2: 6-Month Website & SEO Growth -->
+                <div class="pkg-card popular">
+                    <div class="card-header-row">
+                        <span class="pkg-badge badge-orange">SEO Growth · 6 Months</span>
+                        <span class="popular-badge">⭐ Best Value</span>
+                    </div>
+                    <h3>6-Month Website & SEO Growth</h3>
+                    <p class="pkg-desc">Expand your reach online with a multi-page portal optimized for key industry search terms.</p>
+                    <div style="margin-bottom: 16px;">
+                        <span class="original-price" style="text-decoration: line-through; color: var(--text-dim); font-size: 0.9rem;">₹75,000</span>
+                        <span class="savings-tag" style="background: rgba(34,197,94,0.15); color: var(--green); padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 600; margin-left: 8px;">Save ₹12,000 (16% Off)</span>
+                    </div>
+                    <div class="pkg-price" style="color:var(--accent); margin-bottom: 2px;">₹63,000 <span style="font-size:1rem; color:var(--text-dim); font-weight:500;">total pack</span></div>
+                    <div class="pkg-price-note">Billed as ₹10,500 / month</div>
+                    <ul class="pkg-features">
+                        <li><span class="dot dot-orange"></span>Standard Multi-Page Static Website (Up to 15 pages, Value: ₹15,000)</li>
+                        <li><span class="dot dot-orange"></span>6 Months Standard Website SEO (Value: ₹60,000)</li>
+                        <li><span class="dot dot-orange"></span><strong>Inclusions:</strong> Up to 15-page custom site, 15 search keywords targeted, 2 SEO blog posts/mo, search crawl check, technical on-page audits</li>
+                    </ul>
+                    <button class="pkg-cta cta-orange" onclick="window.open('https://wa.me/917742064233?text=Hi%2C+I%27m+interested+in+the+6-Month+Website+%26+SEO+Growth+Package','_blank')">Choose SEO Booster →</button>
+                </div>
+
+                <!-- PKG 3: 1-Year Website & SEO Dominance -->
+                <div class="pkg-card elite">
+                    <div class="card-header-row">
+                        <span class="pkg-badge badge-purple">SEO Dominance · 1 Year</span>
+                    </div>
+                    <h3>1-Year Website & SEO Dominance</h3>
+                    <p class="pkg-desc">Build a high-performance web asset powered by aggressive SEO, backlink campaigns, and custom management panel.</p>
+                    <div style="margin-bottom: 16px;">
+                        <span class="original-price" style="text-decoration: line-through; color: var(--text-dim); font-size: 0.9rem;">₹2,65,000</span>
+                        <span class="savings-tag" style="background: rgba(34,197,94,0.15); color: var(--green); padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 600; margin-left: 8px;">Save ₹53,000 (20% Off)</span>
+                    </div>
+                    <div class="pkg-price" style="color:#c4b5fd; margin-bottom: 2px;">₹2,12,000 <span style="font-size:1rem; color:var(--text-dim); font-weight:500;">total pack</span></div>
+                    <div class="pkg-price-note">Billed as ₹17,666 / month</div>
+                    <ul class="pkg-features">
+                        <li><span class="dot dot-purple"></span>Mid Dynamic Web App + Admin Panel & Booking (Value: ₹25,000)</li>
+                        <li><span class="dot dot-purple"></span>12 Months Premium Website SEO (Value: ₹2,40,000)</li>
+                        <li><span class="dot dot-purple"></span><strong>Inclusions:</strong> Custom Admin Panel to manage services, 25+ high-competition keywords, 4 optimized blog posts/mo (1000+ words), 5 premium backlinks/mo, AEO markup, 1-Yr hosting included</li>
+                    </ul>
+                    <button class="pkg-cta cta-purple" onclick="window.open('https://wa.me/917742064233?text=Hi%2C+I%27m+interested+in+the+1-Year+Website+%26+SEO+Dominance+Package','_blank')">Start Dominating →</button>
+                </div>
+
+            </div>
+
+            <div class="section-header" style="margin-top: 64px;">
+                <div class="section-label">Bundled Value Deals</div>
+                <h2>Strategic Growth Packages</h2>
+                <p>Expertly combined services at blended rates. Maximum ROI, minimum confusion.</p>
+            </div>
+
+            <div class="notice-strip">
+                <strong>🌐 Hosting & Domain Policy:</strong> Domain names are purchased directly by the client. All static websites are hosted on <strong>GrowthHex's common server / hosting</strong>. Dynamic applications are hosted on GrowthHex's common server or client-managed servers, except where 1-year hosting is explicitly bundled (such as the Fully Dynamic plan).
+            </div>
+
+            <div class="packages-grid">
+
+                <!-- PKG 1: 3-Month Growth Foundation -->
+                <div class="pkg-card">
+                    <div class="card-header-row">
+                        <span class="pkg-badge badge-gray">Foundation · 3 Months</span>
+                    </div>
+                    <h3>3-Month Growth Foundation</h3>
+                    <p class="pkg-desc">Perfect for new storefronts, clinics, or cafes wanting to establish online presence and local ranking quickly.</p>
+                    <div style="margin-bottom: 16px;">
+                        <span class="original-price" style="text-decoration: line-through; color: var(--text-dim); font-size: 0.9rem;">₹37,000</span>
+                        <span class="savings-tag" style="background: rgba(34,197,94,0.15); color: var(--green); padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 600; margin-left: 8px;">Save ₹5,500 (15% Off)</span>
+                    </div>
+                    <div class="pkg-price" style="color:var(--accent); margin-bottom: 2px;">₹31,500 <span style="font-size:1rem; color:var(--text-dim); font-weight:500;">total pack</span></div>
+                    <div class="pkg-price-note">Billed as ₹10,500 / month</div>
+                    <ul class="pkg-features">
+                        <li><span class="dot dot-orange"></span>1-Page Custom Static Website (Value: ₹7,000)</li>
+                        <li><span class="dot dot-orange"></span>3 Months GMB Standard Management (Value: ₹21,000)</li>
+                        <li><span class="dot dot-orange"></span>3 Months Social Media Starter (4 posts/mo, Value: ₹9,000)</li>
+                        <li><span class="dot dot-orange"></span><strong>Standard details:</strong> 12 organic posts, review replies, 10+ local citations, daily photos (approx 30/mo)</li>
+                    </ul>
+                    <button class="pkg-cta cta-outline" onclick="window.open('https://wa.me/917742064233?text=Hi%2C+I%27m+interested+in+the+3-Month+Growth+Foundation+Package','_blank')">Get Started →</button>
+                </div>
+
+                <!-- PKG 2: 6-Month Hyperlocal Growth -->
+                <div class="pkg-card popular">
+                    <div class="card-header-row">
+                        <span class="pkg-badge badge-orange">Growth · 6 Months</span>
+                        <span class="popular-badge">⭐ Most Popular</span>
+                    </div>
+                    <h3>6-Month Hyperlocal Growth</h3>
+                    <p class="pkg-desc">Aggressive local lead generation, search engine ranking, and Meta Ads for established local competitors.</p>
+                    <div style="margin-bottom: 16px;">
+                        <span class="original-price" style="text-decoration: line-through; color: var(--text-dim); font-size: 0.9rem;">₹2,55,000</span>
+                        <span class="savings-tag" style="background: rgba(34,197,94,0.15); color: var(--green); padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 600; margin-left: 8px;">Save ₹50,000 (19% Off)</span>
+                    </div>
+                    <div class="pkg-price" style="color:var(--accent); margin-bottom: 2px;">₹2,05,000 <span style="font-size:1rem; color:var(--text-dim); font-weight:500;">total pack</span></div>
+                    <div class="pkg-price-note">Billed as ₹34,166 / month • Ad spend separate</div>
+                    <ul class="pkg-features">
+                        <li><span class="dot dot-orange"></span>Standard Multi-Page Static Website (Up to 15 pages, Value: ₹15,000)</li>
+                        <li><span class="dot dot-orange"></span>6 Months GMB Premium Management (Value: ₹60,000)</li>
+                        <li><span class="dot dot-orange"></span>6 Months Meta Ads Setup & Management (Value: ₹90,000)</li>
+                        <li><span class="dot dot-orange"></span>6 Months Standard Website SEO (Value: ₹60,000)</li>
+                        <li><span class="dot dot-orange"></span>6 Months Social Media Booster (8 posts/mo, Value: ₹30,000)</li>
+                        <li><span class="dot dot-orange"></span><strong>Standard details:</strong> 48 organic posts/reels, 15 GMB posts/mo, weekly Meta campaign optimizations, targeting 15 SEO keywords + 12 blog posts</li>
+                    </ul>
+                    <button class="pkg-cta cta-orange" onclick="window.open('https://wa.me/917742064233?text=Hi%2C+I%27m+interested+in+the+6-Month+Hyperlocal+Growth+Package','_blank')">Choose Growth Booster →</button>
+                </div>
+
+                <!-- PKG 3: 1-Year Enterprise Dominance -->
+                <div class="pkg-card elite">
+                    <div class="card-header-row">
+                        <span class="pkg-badge badge-purple">Elite · 1 Year</span>
+                    </div>
+                    <h3>1-Year Enterprise Dominance</h3>
+                    <p class="pkg-desc">Complete digital dominance suite for brands demanding market supremacy, custom apps, and AI voice/text workflows.</p>
+                    <div style="margin-bottom: 16px;">
+                        <span class="original-price" style="text-decoration: line-through; color: var(--text-dim); font-size: 0.9rem;">₹8,48,000</span>
+                        <span class="savings-tag" style="background: rgba(34,197,94,0.15); color: var(--green); padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 600; margin-left: 8px;">Save ₹2,12,000 (25% Off)</span>
+                    </div>
+                    <div class="pkg-price" style="color:#c4b5fd; margin-bottom: 2px;">₹6,36,000 <span style="font-size:1rem; color:var(--text-dim); font-weight:500;">total pack</span></div>
+                    <div class="pkg-price-note">Billed as ₹53,000 / month • Ad spend separate</div>
+                    <ul class="pkg-features">
+                        <li><span class="dot dot-purple"></span>Mid Dynamic Web App + Admin Panel & Booking System (Value: ₹25,000)</li>
+                        <li><span class="dot dot-purple"></span>WhatsApp AI Sales Setup & 1-Year Optimization (Value: ₹67,000)</li>
+                        <li><span class="dot dot-purple"></span>12 Months GMB Premium Dominance (Value: ₹1,80,000)</li>
+                        <li><span class="dot dot-purple"></span>12 Months Premium Website SEO (Value: ₹2,40,000)</li>
+                        <li><span class="dot dot-purple"></span>12 Months Premium Meta Ads Scaling & Management (Value: ₹3,00,000)</li>
+                        <li><span class="dot dot-purple"></span>12 Months Dedicated Technical Support & Maintenance (Value: ₹36,000)</li>
+                        <li><span class="dot dot-purple"></span><strong>Elite details:</strong> 25 GMB posts/mo + catalog, WhatsApp AI agent trained on custom FAQs, 25+ keywords + 48 blog posts, Server-side CAPI Meta Ads, 5 hrs/mo developer support</li>
+                    </ul>
+                    <button class="pkg-cta cta-purple" onclick="window.open('https://wa.me/917742064233?text=Hi%2C+I%27m+interested+in+the+1-Year+Enterprise+Dominance+Package','_blank')">Contact Enterprise →</button>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div style="max-width:1280px; margin:0 auto; padding:0 clamp(16px,5vw,64px);">
+            <div class="footer-logo">GrowthHex•Digital</div>
+            <p>
+                *Ad spend for Meta/Facebook campaigns is paid directly to the platform and is not included in management fees. Static websites include 12 months of complimentary hosting on GrowthHex's shared server. Dynamic applications are hosted on client-owned servers, billed directly by the cloud provider. Prices are subject to scope and complexity. All services based in Jaipur, Rajasthan.
+            </p>
+            <div style="margin-top:24px; color:var(--text-dim); font-size:0.78rem;">
+                © 2026 GrowthHex Digital. Led by Saurav Kumawat Badiwaal, Senior Technical Lead.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        /* ═══ SERVICE DATA ═══ */
+        const serviceData = {
+            gmb: [
+                {
+                    tier: "GMB Creation Only",
+                    price: "₹5,000",
+                    sub: "One-Time Setup",
+                    featured: false,
+                    inclusions: [
+                        "Google Business Profile creation & verification setup",
+                        "NAP (Name, Address, Phone) consistency mapping & audit",
+                        "Optimize business category, descriptions, and operational hours",
+                        "Up to 10 storefront & interior photos/videos uploaded",
+                        "One-time account ownership transfer & documentation"
+                    ],
+                    note: null
+                },
+                {
+                    tier: "GMB Standard Growth",
+                    price: "₹6,999",
+                    sub: "per month",
+                    featured: true,
+                    inclusions: [
+                        "Full profile optimization with local target keywords",
+                        "8 to 10 custom posts/updates per month (promotions, offers)",
+                        "Active review monitoring & replies (for 100% of reviews)",
+                        "Daily photo uploads (approx. 30 high-quality photos/month)",
+                        "Citations & listings built on 10+ local business platforms"
+                    ],
+                    note: null
+                },
+                {
+                    tier: "GMB Premium Dominance",
+                    price: "₹15,000",
+                    sub: "per month",
+                    featured: false,
+                    inclusions: [
+                        "25 custom GMB posts/updates per month with design assets",
+                        "Product & Service Catalog setup (up to 20 items with SEO description)",
+                        "Competitor rank tracking (weekly audits on 5 main local competitors)",
+                        "Proactive spam competitor reporting & list cleanup",
+                        "Review generation strategy setup (targeting 20+ reviews/week)"
+                    ],
+                    note: null
+                }
+            ],
+            static: [
+                {
+                    tier: "Basic Single-Page",
+                    price: "₹7,000",
+                    sub: "One-Time Cost",
+                    featured: false,
+                    inclusions: [
+                        "1-page custom-coded static website (HTML5/CSS3/Vanilla JS)",
+                        "Mobile-first responsive UI (Home, About, Services, Gallery, Contact)",
+                        "Floating WhatsApp & Call Now CTAs with pre-filled custom message",
+                        "Embedded Google Maps location & 1 contact/lead form",
+                        "Includes hosting setup & up to 10 photos in Gallery section",
+                        "Domain purchased by client (Domain registration support)"
+                    ],
+                    note: "🌐 Includes free hosting on GrowthHex shared server."
+                },
+                {
+                    tier: "Standard Multi-Page",
+                    price: "₹15,000",
+                    sub: "One-Time Cost",
+                    featured: true,
+                    inclusions: [
+                        "Up to 15 custom-coded pages (Home, About, up to 10 services, Gallery, Contact)",
+                        "Premium custom UI/UX design & color scheme selection",
+                        "On-page SEO optimization (meta tags, descriptions, sitemap.xml)",
+                        "Floating WhatsApp & Call Now custom integrations",
+                        "1 custom contact form with email notification alerts",
+                        "Domain purchased by client"
+                    ],
+                    note: "🌐 Includes free hosting on GrowthHex shared server."
+                },
+                {
+                    tier: "Premium Edge",
+                    price: "₹25,000+",
+                    sub: "One-Time Cost",
+                    featured: false,
+                    inclusions: [
+                        "15+ custom-coded pages with interactive UI elements",
+                        "High-speed CDN config (under 1-second global page load time)",
+                        "Payment gateway integration (Stripe, Razorpay or PayPal) & forms",
+                        "Advanced SEO indexing & XML search engine sitemaps submission",
+                        "Up to 3 custom contact / booking forms with database routing"
+                    ],
+                    note: "🌐 Includes free hosting on GrowthHex shared server."
+                }
+            ],
+            dynamic: [
+                {
+                    tier: "Mid Dynamic Website",
+                    price: "₹15,000",
+                    sub: "Starting Cost",
+                    featured: false,
+                    inclusions: [
+                        "Up to 15 dynamic pages max (Home, About, Services, Gallery, Contact, Booking)",
+                        "Custom booking page setup with database lead routing",
+                        "Admin Panel to manage up to 3 models (edit services, gallery, testimonials)",
+                        "On-page SEO setup & target keyword optimization",
+                        "Database entries for contact inquiries & booking records",
+                        "Domain purchased by client"
+                    ],
+                    note: "🌐 Hosted on GrowthHex shared server."
+                },
+                {
+                    tier: "Fully Dynamic",
+                    price: "₹25,000",
+                    sub: "Starting Cost",
+                    featured: true,
+                    inclusions: [
+                        "Minimum 25 pages with custom schema database structure",
+                        "Fully customized Admin Panel to manage site, services, users, blog posts",
+                        "On-page SEO & XML sitemaps submission",
+                        "1 Year Hosting on GrowthHex server + free SSL certificate",
+                        "Basic platform training & 5 hours of dedicated technical support",
+                        "Domain purchased by client"
+                    ],
+                    note: "🛡️ Free hosting for the first year included."
+                },
+                {
+                    tier: "Premium Enterprise",
+                    price: "₹1,50,000+",
+                    sub: "Starting Cost",
+                    featured: false,
+                    inclusions: [
+                        "Bespoke CRM, ERP, custom SaaS or multi-location architectures",
+                        "Secure custom user authentication, roles, and databases",
+                        "RESTful API development & third party integrations",
+                        "Scalable high-security cloud deployment & audit",
+                        "Domain purchased by client"
+                    ],
+                    note: "⚠️ Hosted on client-owned servers (AWS, DigitalOcean, etc.)."
+                }
+            ],
+            meta: [
+                {
+                    tier: "Basic Ad Setup",
+                    price: "₹5,000",
+                    sub: "One-Time Setup Fee",
+                    featured: false,
+                    inclusions: [
+                        "Complete Meta Ad account & Business Manager setup",
+                        "Instagram & Facebook Page merge and configuration",
+                        "Meta dashboard verification & standard Pixel setup",
+                        "1 campaign setup with 2 ad sets and up to 4 ad creatives"
+                    ],
+                    note: "📢 Ad spend is paid directly to Meta."
+                },
+                {
+                    tier: "Standard Growth",
+                    price: "₹15,000",
+                    sub: "per month (Ad spend separate)",
+                    featured: true,
+                    inclusions: [
+                        "Continuous monthly campaign support & management",
+                        "Up to 3 active campaigns (brand awareness, lead gen, retargeting)",
+                        "Management of up to 6 distinct ad sets & audience groups",
+                        "Weekly copy writing suggestions & creative ad suggestions",
+                        "Ads optimization & tracking dashboard check every 3–7 days"
+                    ],
+                    note: "📢 Ad spend is paid directly to Meta (₹500/day minimum recommended)."
+                },
+                {
+                    tier: "Premium Scaling",
+                    price: "₹50,000+",
+                    sub: "per month (Ad spend separate)",
+                    featured: false,
+                    inclusions: [
+                        "Unlimited active campaigns & scaling strategy",
+                        "Advanced Server-Side Tracking & Conversions API (CAPI) setup",
+                        "Multivariable creative testing & budget bidding every 48 hours",
+                        "Full-funnel custom attribution & lookalike audience scaling"
+                    ],
+                    note: "📢 Ad spend is paid directly to Meta."
+                }
+            ],
+            seo: [
+                {
+                    tier: "Local / GBP SEO",
+                    price: "₹6,000",
+                    sub: "per month",
+                    featured: false,
+                    inclusions: [
+                        "Google Maps listing local SEO keyword tuning & mapping",
+                        "Optimization & tracking for 15 target local keywords",
+                        "Competitor rank tracking (weekly audits on 5 main local competitors)",
+                        "NAP consistency audit & listing citation cleanup across 20+ directories",
+                        "Review acquisition strategy support & local business schema optimization"
+                    ],
+                    note: null
+                },
+                {
+                    tier: "Standard Website SEO",
+                    price: "₹10,000",
+                    sub: "per month",
+                    featured: true,
+                    inclusions: [
+                        "Optimization & tracking for up to 15 industry keywords",
+                        "2 optimized SEO blog posts per month (500-800 words each)",
+                        "Google Search Console & Google Analytics setup",
+                        "Weekly site crawl audits & technical on-page optimizations"
+                    ],
+                    note: null
+                },
+                {
+                    tier: "Premium Website SEO",
+                    price: "₹20,000+",
+                    sub: "per month",
+                    featured: false,
+                    inclusions: [
+                        "Optimization for 25+ high-competition keywords",
+                        "4 optimized SEO blog posts per month (1000+ words each)",
+                        "5 high-quality backlinks built per month",
+                        "Answer Engine Optimization (AEO) schema markup & audits"
+                    ],
+                    note: null
+                }
+            ],
+            docs: [
+                {
+                    tier: "Business Document Setup",
+                    price: "₹1,000",
+                    sub: "Starting Price",
+                    featured: true,
+                    inclusions: [
+                        "Udyam Aadhaar (MSME) registration creation & updates",
+                        "GST registration setup & profile updation",
+                        "Company registration (LLP, Pvt Ltd) and legal agreements",
+                        "FSSAI Food Safety licensing assistance",
+                        "Shop & Establishment Act registration support"
+                    ],
+                    note: "📄 Prices vary by service type and government filing/processing fees."
+                }
+            ]
+        };
+
+        /* ═══ TAB SWITCH ═══ */
+        function switchTab(id) {
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById('tab-' + id).classList.add('active');
+
+            const container = document.getElementById('service-content');
+            container.style.opacity = '0';
+
+            setTimeout(() => {
+                const items = serviceData[id];
+                let html = '';
+                items.forEach((item, idx) => {
+                    const fc = item.featured ? 'featured' : '';
+                    const noteHtml = item.note
+                        ? `<div class="hosting-note">${item.note}</div>`
+                        : '';
+                    const badge = item.featured ? '<span class="featured-badge">Recommended</span>' : '';
+                    html += `
+                        <div class="service-card ${fc} fade-up" style="animation-delay:${idx * 0.08}s">
+                            <div class="card-header-row">
+                                <div class="card-tier">${item.tier}</div>
+                                ${badge}
+                            </div>
+                            <div class="card-price">${item.price}</div>
+                            <div class="card-price-sub">${item.sub}</div>
+                            <ul>
+                                ${item.inclusions.map(inc => `
+                                    <li>
+                                        <span class="check">✓</span>
+                                        ${inc}
+                                    </li>
+                                `).join('')}
+                            </ul>
+                            ${noteHtml}
+                        </div>
+                    `;
+                });
+                container.innerHTML = html;
+                container.style.opacity = '1';
+            }, 200);
+        }
+
+        /* ═══ SCROLL ═══ */
+        function scrollToSection(id) {
+            document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        /* ═══ NAV TOGGLE (mobile) ═══ */
+        function toggleNav() {
+            const nl = document.getElementById('navLinks');
+            const open = nl.style.display === 'flex';
+            nl.style.cssText = open
+                ? ''
+                : 'display:flex; flex-direction:column; position:absolute; top:64px; left:0; right:0; background:rgba(10,13,20,0.97); backdrop-filter:blur(20px); padding:16px; border-bottom:1px solid var(--border); gap:4px; z-index:200;';
+        }
+
+        /* ═══ CHART ═══ */
+        function initChart() {
+            const ctx = document.getElementById('growthChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Foundation', 'Growth', 'Dominance'],
+                    datasets: [
+                        {
+                            label: 'Target Keywords',
+                            data: [10, 25, 60],
+                            backgroundColor: 'rgba(249,115,22,0.75)',
+                            borderColor: 'rgba(249,115,22,1)',
+                            borderWidth: 1,
+                            borderRadius: 8,
+                            maxBarThickness: 38
+                        },
+                        {
+                            label: 'Backlink Goal',
+                            data: [5, 15, 35],
+                            backgroundColor: 'rgba(56,189,248,0.6)',
+                            borderColor: 'rgba(56,189,248,1)',
+                            borderWidth: 1,
+                            borderRadius: 8,
+                            maxBarThickness: 38
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                color: '#94a3b8',
+                                font: { size: 11, family: 'Inter' },
+                                boxWidth: 12, padding: 16
+                            }
+                        },
+                        tooltip: {
+                            backgroundColor: 'rgba(17,24,39,0.95)',
+                            titleColor: '#f1f5f9',
+                            bodyColor: '#94a3b8',
+                            borderColor: 'rgba(255,255,255,0.08)',
+                            borderWidth: 1,
+                            padding: 12,
+                            cornerRadius: 10
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: { color: 'rgba(255,255,255,0.04)' },
+                            ticks: { color: '#475569', font: { size: 10 } }
+                        },
+                        x: {
+                            grid: { display: false },
+                            ticks: { color: '#94a3b8', font: { size: 11 } }
+                        }
+                    }
+                }
+            });
+        }
+
+        /* ═══ INIT ═══ */
+        window.onload = () => {
+            switchTab('gmb');
+            initChart();
+        };
+    </script>
+</body>
+
+</html>
