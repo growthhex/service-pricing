@@ -47,7 +47,7 @@ We tailor our local SEO, keyword mapping, and custom web assets for Jaipur's top
   * Full profile optimization with local target keywords
   * 8 to 10 custom posts/updates per month (promotions, offers)
   * Active review monitoring & replies (for 100% of reviews)
-  * Daily photo uploads (approx. 30 high-quality photos/month)
+  * Monthly photo / assets uploads upto 4 times a month
   * Citations & listings built on 10+ local business platforms
 
 ### 3. GMB Premium Dominance (₹15,000 / month)
@@ -255,7 +255,7 @@ We tailor our local SEO, keyword mapping, and custom web assets for Jaipur's top
   * 1-Page Custom Static Website (Value: ₹7,000)
   * 3 Months GMB Standard Management (Value: ₹21,000)
   * 3 Months Social Media Starter (4 posts/mo, Value: ₹9,000)
-  * **Deliverables:** 12 organic posts, review replies, 10+ local citations, daily photos (approx 30/mo)
+  * **Deliverables:** 12 organic posts, review replies, 10+ local citations, monthly photo / assets uploads (upto 4 times/mo)
 
 ### 2. 6-Month Hyperlocal Growth [Recommended]
 * **Price:** **₹2,05,000 total pack** (Original: ~~₹2,55,000~~ | Save ₹50,000 / 19% Off)

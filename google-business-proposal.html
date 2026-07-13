@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposal: Google Business Profile Dominance | GrowthHex Digital</title>
+    <meta name="description"
+        content="Custom-crafted Google Business Profile (GBP) creation and monthly optimization proposal by GrowthHex Digital.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg-deep: #f8fafc;
+            --bg-card: #ffffff;
+            --bg-glass: rgba(255, 255, 255, 0.85);
+            --border: rgba(15, 23, 42, 0.08);
+            --border-glow: rgba(234, 88, 12, 0.25);
+            --accent: #ea580c;
+            --accent-2: #f97316;
+            --accent-glow: rgba(234, 88, 12, 0.08);
+            --green: #16a34a;
+            --blue: #0284c7;
+            --purple: #7c3aed;
+            --text-primary: #0f172a;
+            --text-muted: #475569;
+            --text-dim: #64748b;
+            --gradient-hero: linear-gradient(135deg, #ea580c 0%, #f97316 40%, #fdb777 100%);
+            --gradient-card: linear-gradient(145deg, rgba(234, 88, 12, 0.03) 0%, rgba(255, 255, 255, 0) 60%);
+            --radius: 16px;
+            --radius-lg: 24px;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-deep);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            line-height: 1.6;
+            width: 100%;
+        }
+
+        /* Noise Overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.025;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            padding: 0 clamp(16px, 5vw, 64px);
+        }
+
+        .nav-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+        }
+
+        .nav-logo {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+            font-size: 1.35rem;
+            background: var(--gradient-hero);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.5px;
+            text-decoration: none;
+        }
+
+        .nav-logo:hover {
+            opacity: 0.9;
+        }
+
+        .nav-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 14px;
+            border-radius: 8px;
+            transition: color 0.2s, background 0.2s;
+            border: 1px solid var(--border);
+        }
+
+        .nav-back:hover {
+            color: var(--text-primary);
+            background: rgba(0, 0, 0, 0.03);
+        }
+
+        main {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 40px clamp(16px, 5vw, 64px);
+            position: relative;
+            z-index: 1;
+        }
+
+        /* HERO PROPOSAL SECTION */
+        .proposal-hero {
+            position: relative;
+            background: linear-gradient(135deg, rgba(234, 88, 12, 0.04) 0%, rgba(241, 245, 249, 0.8) 100%);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 48px;
+            margin-bottom: 40px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.02);
+        }
+
+        .proposal-hero-glow {
+            position: absolute;
+            right: -10%;
+            top: -20%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(249, 115, 22, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .proposal-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(249, 115, 22, 0.1);
+            border: 1px solid rgba(249, 115, 22, 0.25);
+            color: var(--accent-2);
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 100px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .proposal-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: -1px;
+            margin-bottom: 16px;
+        }
+
+        .proposal-title span {
+            background: var(--gradient-hero);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .proposal-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            margin-top: 24px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        .proposal-meta-item strong {
+            color: var(--text-primary);
+        }
+
+        /* PERSONALIZATION BLOCK */
+        .personalize-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 4px 20px rgba(15, 23, 42, 0.02);
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .personalize-info h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .personalize-info p {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+        }
+
+        .personalize-input-wrapper {
+            flex-grow: 1;
+            max-width: 400px;
+            min-width: 250px;
+            position: relative;
+        }
+
+        .personalize-input {
+            width: 100%;
+            background: var(--bg-deep);
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+            padding: 12px 16px;
+            border-radius: 10px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .personalize-input:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 2px var(--accent-glow);
+        }
+
+        /* TARGET INDUSTRIES SECTION */
+        .industries-section {
+            margin-bottom: 56px;
+        }
+
+        .industries-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 32px;
+            max-width: 700px;
+        }
+
+        .industry-category-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px;
+            position: relative;
+            overflow: hidden;
+            transition: border-color 0.25s, box-shadow 0.25s;
+        }
+
+        .industry-category-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--gradient-card);
+            pointer-events: none;
+        }
+
+        .industry-category-card:hover {
+            border-color: rgba(249, 115, 22, 0.25);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .industry-cat-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding-bottom: 10px;
+        }
+
+        .badge-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .industry-badge {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 100px;
+            transition: all 0.2s ease;
+            cursor: default;
+        }
+
+        .industry-badge:hover {
+            border-color: var(--accent);
+            color: var(--text-primary);
+            background: rgba(249, 115, 22, 0.05);
+            transform: translateY(-1px);
+        }
+
+        /* SIDE-BY-SIDE CARDS */
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-bottom: 56px;
+        }
+
+        .option-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 36px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.03), 0 1px 3px rgba(15, 23, 42, 0.02);
+        }
+
+        .option-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--gradient-card);
+            pointer-events: none;
+        }
+
+        .option-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--border-glow);
+            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+        }
+
+        .option-card.recommended {
+            border-color: rgba(234, 88, 12, 0.35);
+            background: linear-gradient(145deg, rgba(234, 88, 12, 0.03) 0%, var(--bg-card) 50%);
+        }
+
+        .rec-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--accent);
+            color: #fff;
+            font-size: 0.65rem;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 100px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .card-heading {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        .card-price-row {
+            margin: 16px 0 24px;
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+        }
+
+        .price-currency {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--accent);
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .price-amount {
+            font-size: 2.8rem;
+            font-weight: 900;
+            color: var(--text-primary);
+            font-family: 'Outfit', sans-serif;
+            letter-spacing: -2px;
+        }
+
+        .price-subtext {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+        }
+
+        .features-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            flex-grow: 1;
+            margin-bottom: 32px;
+        }
+
+        .features-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        .feature-icon {
+            flex-shrink: 0;
+            width: 20px;
+            height: 20px;
+            background: rgba(34, 197, 94, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.65rem;
+            color: var(--green);
+            margin-top: 1px;
+            border: 1px solid rgba(34, 197, 94, 0.2);
+        }
+
+        .feature-icon.blue-icon {
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--blue);
+            border-color: rgba(56, 189, 248, 0.2);
+        }
+
+        .cta-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 0.92rem;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.25s;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .cta-primary {
+            background: var(--accent);
+            color: #fff;
+        }
+
+        .cta-primary:hover {
+            background: var(--accent-2);
+            transform: translateY(-1px);
+        }
+
+        .cta-secondary {
+            background: transparent;
+            color: var(--text-primary);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .cta-secondary:hover {
+            background: rgba(0, 0, 0, 0.02);
+            border-color: rgba(0, 0, 0, 0.15);
+        }
+
+        /* COMPARISON TABLE */
+        .comparison-section {
+            margin-bottom: 56px;
+        }
+
+        .section-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .table-wrapper {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.88rem;
+        }
+
+        th,
+        td {
+            padding: 18px 24px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        th {
+            background: rgba(15, 23, 42, 0.02);
+            color: var(--text-primary);
+            font-weight: 600;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .td-feature {
+            font-weight: 500;
+            color: var(--text-primary);
+            width: 25%;
+        }
+
+        .td-val {
+            color: var(--text-muted);
+        }
+
+        .td-highlight {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        /* INTERACTIVE SELECTOR / CALCULATOR */
+        .calculator-card {
+            background: linear-gradient(135deg, rgba(234, 88, 12, 0.05) 0%, rgba(255, 255, 255, 0.95) 100%);
+            border: 1px solid rgba(234, 88, 12, 0.2);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            margin-bottom: 56px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.03);
+        }
+
+        .calc-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .calc-header h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 800;
+            letter-spacing: -0.3px;
+        }
+
+        .calc-body {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+        }
+
+        @media (max-width: 768px) {
+            .calc-body {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .calc-selector {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .selector-option {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 16px 20px;
+            border-radius: 12px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.2s ease;
+        }
+
+        .selector-option:hover {
+            border-color: rgba(255, 255, 255, 0.15);
+            transform: translateX(4px);
+        }
+
+        .selector-option.selected {
+            border-color: var(--accent);
+            background: rgba(249, 115, 22, 0.05);
+            box-shadow: 0 0 12px rgba(249, 115, 22, 0.1);
+        }
+
+        .sel-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .radio-circle {
+            width: 18px;
+            height: 18px;
+            border: 2px solid var(--text-dim);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .selector-option.selected .radio-circle {
+            border-color: var(--accent);
+        }
+
+        .selector-option.selected .radio-circle::after {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background-color: var(--accent);
+            border-radius: 50%;
+        }
+
+        .sel-name {
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .sel-price {
+            font-weight: 700;
+            font-family: 'Outfit', sans-serif;
+            color: var(--text-primary);
+        }
+
+        .calc-summary {
+            background: rgba(0, 0, 0, 0.015);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .sum-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.88rem;
+            color: var(--text-muted);
+        }
+
+        .sum-row.total {
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            font-weight: 700;
+            border-top: 1px solid var(--border);
+            padding-top: 16px;
+        }
+
+        .sum-row.total .price-amount-sm {
+            font-size: 2rem;
+            font-family: 'Outfit', sans-serif;
+            color: var(--accent-2);
+            font-weight: 800;
+        }
+
+        /* POLICY/NOTICE BANNER */
+        .policy-strip {
+            background: rgba(56, 189, 248, 0.05);
+            border: 1px solid rgba(56, 189, 248, 0.15);
+            border-radius: 12px;
+            padding: 16px 24px;
+            font-size: 0.82rem;
+            color: #7dd3fc;
+            margin-bottom: 56px;
+            line-height: 1.6;
+        }
+
+        .policy-strip strong {
+            color: #0284c7;
+        }
+
+        /* FOOTER */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 40px 0;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        footer .footer-logo {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 900;
+            font-size: 1.5rem;
+            background: var(--gradient-hero);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 12px;
+        }
+
+        footer p {
+            color: var(--text-dim);
+            font-size: 0.8rem;
+            line-height: 1.7;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* PRINT STYLING (Ctrl+P) */
+        @media print {
+            body {
+                background: var(--bg-deep) !important;
+                color: var(--text-primary) !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            main {
+                padding: 20px;
+            }
+
+            .proposal-hero {
+                background: linear-gradient(135deg, rgba(234, 88, 12, 0.04) 0%, rgba(241, 245, 249, 0.8) 100%) !important;
+                border: 1px solid var(--border) !important;
+                color: var(--text-primary) !important;
+            }
+
+            .proposal-title span {
+                -webkit-text-fill-color: initial !important;
+                color: var(--text-primary) !important;
+            }
+
+            .personalize-card,
+            nav,
+            .calc-body,
+            .calculator-card,
+            .cta-btn,
+            footer {
+                display: none !important;
+            }
+
+            .options-grid {
+                display: flex !important;
+                gap: 20px !important;
+            }
+
+            .option-card {
+                background: var(--bg-card) !important;
+                color: var(--text-primary) !important;
+                border: 1px solid var(--border) !important;
+                margin-bottom: 0px !important;
+                break-inside: avoid;
+                page-break-inside: avoid;
+                padding: 24px !important;
+                flex: 1 !important;
+            }
+
+            .price-amount {
+                color: var(--text-primary) !important;
+            }
+
+            .features-list li {
+                color: var(--text-muted) !important;
+            }
+
+            .feature-icon {
+                border-color: var(--green) !important;
+                color: var(--green) !important;
+            }
+
+            .feature-icon.blue-icon {
+                border-color: var(--blue) !important;
+                color: var(--blue) !important;
+            }
+
+            .table-wrapper {
+                background: var(--bg-card) !important;
+                border: 1px solid var(--border) !important;
+            }
+
+            th,
+            td {
+                border-bottom: 1px solid var(--border) !important;
+                color: var(--text-primary) !important;
+            }
+
+            th {
+                background: rgba(15, 23, 42, 0.02) !important;
+            }
+
+            .td-feature {
+                color: var(--text-primary) !important;
+            }
+
+            .td-val {
+                color: var(--text-muted) !important;
+            }
+
+            .td-highlight {
+                color: var(--accent) !important;
+            }
+
+            .industry-category-card {
+                background: var(--bg-card) !important;
+                color: var(--text-primary) !important;
+                border: 1px solid var(--border) !important;
+                margin-bottom: 16px !important;
+                padding: 24px !important;
+            }
+
+            .industry-badge {
+                border: 1px solid var(--border) !important;
+                color: var(--text-muted) !important;
+                background: rgba(0, 0, 0, 0.02) !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">GrowthHex•Digital</a>
+            <a href="index.html" class="nav-back">← All Proposals</a>
+        </div>
+    </nav>
+
+    <!-- MAIN -->
+    <main>
+
+        <!-- PROPOSAL HERO -->
+        <section class="proposal-hero">
+            <div class="proposal-hero-glow"></div>
+            <div class="proposal-tag">📍 Maps & Local SEO Proposal</div>
+            <h1 class="proposal-title">
+                Google Business Profile (GBP)<br>
+                <span id="clientTitle">Prepared for: Valued Client</span>
+            </h1>
+            <p style="color: var(--text-muted); margin-bottom: 24px; font-size: 1rem; max-width: 650px;">
+                Dominate local searches and rank at the top of Google Maps where nearby customers find services. Tailored verification and growth campaigns designed to maximize calls, routes, and conversions.
+            </p>
+            <div class="proposal-meta">
+                <div class="proposal-meta-item">Lead Architect: <strong>Saurav Kumawat Badiwaal</strong></div>
+                <div class="proposal-meta-item">Valid Until: <strong>July 31, 2026</strong></div>
+                <div class="proposal-meta-item">Location: <strong>Jaipur, RJ</strong></div>
+            </div>
+        </section>
+
+        <!-- CLIENT PERSONALIZATION -->
+        <div class="personalize-card">
+            <div class="personalize-info">
+                <h3>Personalize this Proposal</h3>
+                <p>Enter your business or client name to customize headings, specifications, and WhatsApp CTAs.</p>
+            </div>
+            <div class="personalize-input-wrapper">
+                <input type="text" id="clientNameInput" class="personalize-input" placeholder="Enter Business Name..."
+                    value="Valued Client">
+            </div>
+        </div>
+
+        <!-- TARGET INDUSTRIES & SPECIALIZATIONS -->
+        <section class="industries-section">
+            <h2 class="section-title">🎯 Local Search Specialization Niches</h2>
+            <p class="industries-desc">
+                Google Business Profile dominance is highly dependent on keyword mapping and categorization. We build optimized citation layouts tailored specifically for these leading business verticals:
+            </p>
+
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-bottom: 24px;">
+                <!-- Event & Creative -->
+                <div class="industry-category-card">
+                    <div class="industry-cat-title">✨ Event & Creative Pros</div>
+                    <div class="badge-container">
+                        <span class="industry-badge">🎈 Balloon Decoration</span>
+                        <span class="industry-badge">🎉 Event Decoration</span>
+                        <span class="industry-badge">🎨 Tattoo Artists</span>
+                        <span class="industry-badge">💃 Dance Schools</span>
+                    </div>
+                </div>
+
+                <!-- Personal Portfolios & Creators -->
+                <div class="industry-category-card">
+                    <div class="industry-cat-title">💄 Creative Artists</div>
+                    <div class="badge-container">
+                        <span class="industry-badge">💄 Makeup Artists</span>
+                        <span class="industry-badge">🎸 Solo Musicians</span>
+                        <span class="industry-badge">📸 Photography Hubs</span>
+                        <span class="industry-badge">📐 Interior Designers</span>
+                    </div>
+                </div>
+
+                <!-- Local Home & Automotive -->
+                <div class="industry-category-card">
+                    <div class="industry-cat-title">🔧 Home & Auto Services</div>
+                    <div class="badge-container">
+                        <span class="industry-badge">❄️ AC Repair & Service</span>
+                        <span class="industry-badge">🔧 Car Garages</span>
+                        <span class="industry-badge">🚗 Self Drive Cars</span>
+                        <span class="industry-badge">💧 RO Service Nodes</span>
+                        <span class="industry-badge">☀️ Solar Panel Brands</span>
+                    </div>
+                </div>
+
+                <!-- Health, Food & Leisure -->
+                <div class="industry-category-card">
+                    <div class="industry-cat-title">🏥 Health & Leisure</div>
+                    <div class="badge-container">
+                        <span class="industry-badge">🦷 Dental Clinics</span>
+                        <span class="industry-badge">🏥 Physiotherapists</span>
+                        <span class="industry-badge">🌱 Homeopathic Clinics</span>
+                        <span class="industry-badge">☕ Boutique Cafes</span>
+                        <span class="industry-badge">✈️ Tour & Travels</span>
+                        <span class="industry-badge">🏨 Hotels & Resorts</span>
+                    </div>
+                </div>
+
+                <!-- Custom & Professional Services -->
+                <div class="industry-category-card">
+                    <div class="industry-cat-title">💼 Custom & Professional Services</div>
+                    <div class="badge-container">
+                        <span class="industry-badge">🛍️ Retail & E-Commerce Shops</span>
+                        <span class="industry-badge">🚀 Tech Startups & MVPs</span>
+                        <span class="industry-badge">🤝 Consulting & Coaching Agencies</span>
+                        <span class="industry-badge">🏢 Real Estate Operators</span>
+                        <span class="industry-badge">🎓 Educational Coaching Centers</span>
+                        <span class="industry-badge">🏭 Local Manufacturers & Wholesalers</span>
+                        <span class="industry-badge">✨ Any Custom Business Model</span>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                style="background: rgba(249, 115, 22, 0.05); border: 1px solid rgba(249, 115, 22, 0.15); border-radius: 12px; padding: 18px 24px; font-size: 0.85rem; color: var(--accent-2); line-height: 1.5;">
+                ⚡ <strong>Local Rank Match:</strong> For local service operators (like <strong>Decorators, Repair Services, and Clinics</strong>), appearing in the Google Maps "Local 3-Pack" drives up to 70% of inbound direct phone calls. Our monthly campaign plans handle citation creation, spam competitor removal, and review triggers to ensure you hold the top spots.
+            </div>
+        </section>
+
+        <!-- OPTIONS CARDS -->
+        <div class="options-grid">
+
+            <!-- OPTION 1: Profile Creation Only -->
+            <div class="option-card">
+                <div class="card-heading">GMB Profile Creation</div>
+                <div style="font-size: 0.8rem; color: var(--accent-2); font-weight: 600; text-transform: uppercase;">
+                    One-Time Setup</div>
+
+                <div class="card-price-row">
+                    <span class="price-currency">₹</span>
+                    <span class="price-amount">5,000</span>
+                    <span class="price-subtext">One-Time Investment*</span>
+                </div>
+
+                <ul class="features-list">
+                    <li>
+                        <span class="feature-icon">✓</span>
+                        <span>Google Business Profile creation & verification setup support</span>
+                    </li>
+                    <li>
+                        <span class="feature-icon">✓</span>
+                        <span>NAP (Name, Address, Phone) consistency mapping & audit</span>
+                    </li>
+                    <li>
+                        <span class="feature-icon">✓</span>
+                        <span>Optimization of categories, services, and operational hours</span>
+                    </li>
+                    <li>
+                        <span class="feature-icon">✓</span>
+                        <span>Up to 10 storefront, interior, or product photos uploaded</span>
+                    </li>
+                    <li>
+                        <span class="feature-icon">✓</span>
+                        <span>Ownership transfer & complete startup dashboard guide</span>
+                    </li>
+                </ul>
+
+                <a href="#" id="opt1Cta" class="cta-btn cta-secondary" target="_blank">Select Setup Only</a>
+            </div>
+
+            <!-- OPTION 2: GMB Standard Growth -->
+            <div class="option-card recommended">
+                <span class="rec-badge">Best Value</span>
+                <div class="card-heading">GMB Standard Growth</div>
+                <div style="font-size: 0.8rem; color: var(--accent-2); font-weight: 600; text-transform: uppercase;">
+                    Monthly Rankings Booster</div>
+
+                <div class="card-price-row">
+                    <span class="price-currency">₹</span>
+                    <span class="price-amount">6,999</span>
+                    <span class="price-subtext">per month</span>
+                </div>
+
+                <ul class="features-list">
+                    <li>
+                        <span class="feature-icon">✓</span>
+                        <span>Full profile optimization with local target search terms</span>
+                    </li>
+                    <li>
+                        <span class="feature-icon">✓</span>
+                        <span><strong>8 to 10 custom updates/posts</strong> per month (offers, promos)</span>
+                    </li>
+                    <li>
+                        <span class="feature-icon">✓</span>
+                        <span>Active review monitoring & professional replies for 100% of feedback</span>
+                    </li>
+                    <li>
+                        <span class="feature-icon">✓</span>
+                        <span><strong>Monthly photo / assets uploads</strong> upto 4 times a month</span>
+                    </li>
+                    <li>
+                        <span class="feature-icon">✓</span>
+                        <span>Citations & listings built on 10+ local business index hubs</span>
+                    </li>
+                </ul>
+
+                <a href="#" id="opt2Cta" class="cta-btn cta-primary" target="_blank">Select Standard Growth</a>
+            </div>
+
+            <!-- OPTION 3: GMB Premium Dominance -->
+            <div class="option-card">
+                <div class="card-heading">GMB Premium Dominance</div>
+                <div style="font-size: 0.8rem; color: var(--accent-2); font-weight: 600; text-transform: uppercase;">
+                    Market Supremacy Plan</div>
+
+                <div class="card-price-row">
+                    <span class="price-currency">₹</span>
+                    <span class="price-amount">15,000</span>
+                    <span class="price-subtext">per month</span>
+                </div>
+
+                <ul class="features-list">
+                    <li>
+                        <span class="feature-icon blue-icon">✓</span>
+                        <span><strong>25 custom GMB posts</strong> with professional designer-brand assets</span>
+                    </li>
+                    <li>
+                        <span class="feature-icon blue-icon">✓</span>
+                        <span>Product & Service Catalog setup (up to 20 items + SEO descriptions)</span>
+                    </li>
+                    <li>
+                        <span class="feature-icon blue-icon">✓</span>
+                        <span><strong>Competitor rank tracking</strong> (weekly audits on 5 local rivals)</span>
+                    </li>
+                    <li>
+                        <span class="feature-icon blue-icon">✓</span>
+                        <span>Proactive spam competitor reporting & Map cleanups</span>
+                    </li>
+                    <li>
+                        <span class="feature-icon blue-icon">✓</span>
+                        <span>Review generation setup targeting 20+ reviews/week</span>
+                    </li>
+                </ul>
+
+                <a href="#" id="opt3Cta" class="cta-btn cta-secondary" target="_blank">Select Premium Dominance</a>
+            </div>
+
+        </div>
+
+        <!-- COMPARISON GRID -->
+        <section class="comparison-section">
+            <h2 class="section-title">⚖️ Side-by-Side Plan Comparison</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Service Inclusions</th>
+                            <th>Creation Setup (₹5,000)</th>
+                            <th>Standard Growth (₹6,999/mo)</th>
+                            <th>Premium Dominance (₹15,000/mo)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="td-feature">Billing Schedule</td>
+                            <td class="td-val">One-time fee</td>
+                            <td class="td-val">Monthly recurring</td>
+                            <td class="td-val td-highlight">Monthly recurring</td>
+                        </tr>
+                        <tr>
+                            <td class="td-feature">Monthly Custom Posts</td>
+                            <td class="td-val">None (Setup only)</td>
+                            <td class="td-val">8 - 10 updates</td>
+                            <td class="td-val td-highlight">25 updates + design assets</td>
+                        </tr>
+                        <tr>
+                            <td class="td-feature">Weekly Photos Added</td>
+                            <td class="td-val">10 initial photos</td>
+                            <td class="td-val">Approx. 7 photos/week</td>
+                            <td class="td-val td-highlight">Approx. 15 photos/week</td>
+                        </tr>
+                        <tr>
+                            <td class="td-feature">Review Management</td>
+                            <td class="td-val">None</td>
+                            <td class="td-val">Monitoring & Replies</td>
+                            <td class="td-val td-highlight">Proactive Review Generation Campaign</td>
+                        </tr>
+                        <tr>
+                            <td class="td-feature">Competitor Auditing</td>
+                            <td class="td-val">Initial check only</td>
+                            <td class="td-val">Monthly assessment</td>
+                            <td class="td-val td-highlight">Weekly rank tracking on 5 rivals</td>
+                        </tr>
+                        <tr>
+                            <td class="td-feature">Spam Profile Reports</td>
+                            <td class="td-val">No</td>
+                            <td class="td-val">Standard checks</td>
+                            <td class="td-val td-highlight">Yes (Aggressive reporting of fake rivals)</td>
+                        </tr>
+                        <tr>
+                            <td class="td-feature">Catalog Setup</td>
+                            <td class="td-val">No</td>
+                            <td class="td-val">Services listed</td>
+                            <td class="td-val td-highlight">Up to 20 Catalog products + SEO content</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- INTERACTIVE SELECTOR / CALCULATOR -->
+        <section class="calculator-card">
+            <div class="calc-header">
+                <div>
+                    <h3>Interactive Plan Picker</h3>
+                    <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 4px;">Choose a GBP setup or optimization track to build your dynamic inquiry details.</p>
+                </div>
+            </div>
+
+            <div class="calc-body">
+                <div class="calc-selector">
+                    <div class="selector-option" onclick="selectCalcOption('setup')" id="calc-setup">
+                        <div class="sel-left">
+                            <div class="radio-circle"></div>
+                            <span class="sel-name">GMB Creation Only (₹5,000)</span>
+                        </div>
+                        <span class="sel-price">₹5,000</span>
+                    </div>
+
+                    <div class="selector-option selected" onclick="selectCalcOption('standard')" id="calc-standard">
+                        <div class="sel-left">
+                            <div class="radio-circle"></div>
+                            <span class="sel-name">GMB Standard Growth (₹6,999/mo)</span>
+                        </div>
+                        <span class="sel-price">₹6,999</span>
+                    </div>
+
+                    <div class="selector-option" onclick="selectCalcOption('premium')" id="calc-premium">
+                        <div class="sel-left">
+                            <div class="radio-circle"></div>
+                            <span class="sel-name">GMB Premium Dominance (₹15,000/mo)</span>
+                        </div>
+                        <span class="sel-price">₹15,000</span>
+                    </div>
+                </div>
+
+                <div class="calc-summary">
+                    <div>
+                        <div class="sum-row">
+                            <span>Selected Optimization Level</span>
+                            <span id="sumPlanName" style="color: var(--text-primary); font-weight: 500;">GMB Standard Growth</span>
+                        </div>
+                        <div class="sum-row" style="margin-top: 10px;">
+                            <span>Reporting & Dashboard Integration</span>
+                            <span style="color: var(--green); font-weight: 600;">Included Free</span>
+                        </div>
+                    </div>
+
+                    <div class="sum-row total">
+                        <span>Professional Investment</span>
+                        <div>
+                            <span id="sumTotal" class="price-amount-sm">₹6,999</span>
+                            <span id="sumBillingCycle" style="font-size: 0.8rem; color: var(--text-dim); display: block; text-align: right;">per month</span>
+                        </div>
+                    </div>
+
+                    <button class="cta-btn cta-primary" onclick="proceedToWhatsApp()" style="margin-top: 10px;">
+                        🚀 Proceed with Selected Plan
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- POLICY STRIP -->
+        <div class="policy-strip">
+            <strong>🌐 Profile Verification Policy:</strong> Verification status is subject to Google's listing compliance. Verification codes sent via video, mail, or call must be shared immediately by the client. Monthly campaigns require a <strong>3-month minimum commitment</strong> to establish stable authority in competitive local maps search indexes.
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div style="max-width:1280px; margin:0 auto; padding:0 clamp(16px, 5vw, 64px);">
+            <div class="footer-logo">GrowthHex•Digital</div>
+            <p>
+                *Prices listed are valid for local operational categories in Jaipur. Complex multisite integrations or regional bulk profile mappings can be quoted separately.
+            </p>
+            <div style="margin-top:24px; color:var(--text-dim); font-size:0.78rem;">
+                © 2026 GrowthHex Digital. Led by Saurav Kumawat Badiwaal, Senior Technical Lead.
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE SCRIPT -->
+    <script>
+        let currentClientName = "Valued Client";
+        let selectedOption = "standard"; // "setup", "standard", or "premium"
+
+        const clientInput = document.getElementById('clientNameInput');
+        const clientTitleText = document.getElementById('clientTitle');
+        const opt1Cta = document.getElementById('opt1Cta');
+        const opt2Cta = document.getElementById('opt2Cta');
+        const opt3Cta = document.getElementById('opt3Cta');
+
+        function updateClientVariables() {
+            const enteredVal = clientInput.value.trim();
+            currentClientName = enteredVal ? enteredVal : "Valued Client";
+
+            // Update Title
+            clientTitleText.innerText = "Prepared for: " + currentClientName;
+
+            // Generate WhatsApp CTA URLs
+            const setupMsg = encodeURIComponent(`Hi Saurav, I'd like to proceed with the Google Business Profile Creation Setup (₹5,000) for ${currentClientName}!`);
+            const standardMsg = encodeURIComponent(`Hi Saurav, I'd like to proceed with the Google Business Profile Standard Growth Monthly Plan (₹6,999/mo) for ${currentClientName}!`);
+            const premiumMsg = encodeURIComponent(`Hi Saurav, I'd like to proceed with the Google Business Profile Premium Dominance Monthly Plan (₹15,000/mo) for ${currentClientName}!`);
+
+            opt1Cta.href = `https://wa.me/918952943514?text=${setupMsg}`;
+            opt2Cta.href = `https://wa.me/918952943514?text=${standardMsg}`;
+            opt3Cta.href = `https://wa.me/918952943514?text=${premiumMsg}`;
+        }
+
+        // Handle text input change
+        clientInput.addEventListener('input', updateClientVariables);
+
+        // Selector / Calculator Action
+        function selectCalcOption(option) {
+            selectedOption = option;
+
+            // UI Toggle
+            document.getElementById('calc-setup').classList.remove('selected');
+            document.getElementById('calc-standard').classList.remove('selected');
+            document.getElementById('calc-premium').classList.remove('selected');
+
+            document.getElementById('calc-' + option).classList.add('selected');
+
+            // Data updates
+            const sumName = document.getElementById('sumPlanName');
+            const sumTotal = document.getElementById('sumTotal');
+            const sumCycle = document.getElementById('sumBillingCycle');
+
+            if (option === 'setup') {
+                sumName.innerText = "GMB Profile Creation";
+                sumTotal.innerText = "₹5,000";
+                sumCycle.innerText = "One-Time Investment";
+            } else if (option === 'standard') {
+                sumName.innerText = "GMB Standard Growth";
+                sumTotal.innerText = "₹6,999";
+                sumCycle.innerText = "per month";
+            } else {
+                sumName.innerText = "GMB Premium Dominance";
+                sumTotal.innerText = "₹15,000";
+                sumCycle.innerText = "per month";
+            }
+        }
+
+        // WhatsApp dispatch from calculator
+        function proceedToWhatsApp() {
+            let msg = "";
+            if (selectedOption === 'setup') {
+                msg = encodeURIComponent(`Hi Saurav, I want to proceed with the Google Business Profile Creation option (₹5,000) for ${currentClientName}!`);
+            } else if (selectedOption === 'standard') {
+                msg = encodeURIComponent(`Hi Saurav, I want to proceed with the Google Business Profile Standard Growth option (₹6,999/mo) for ${currentClientName}!`);
+            } else {
+                msg = encodeURIComponent(`Hi Saurav, I want to proceed with the Google Business Profile Premium Dominance option (₹15,000/mo) for ${currentClientName}!`);
+            }
+            window.open(`https://wa.me/918952943514?text=${msg}`, '_blank');
+        }
+
+        // Initialize variables on load
+        window.onload = () => {
+            updateClientVariables();
+            selectCalcOption('standard');
+        };
+    </script>
+</body>
+
+</html>
