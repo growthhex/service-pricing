@@ -1,0 +1,1373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposal: Website Standard Development | GrowthHex Digital</title>
+    <meta name="description"
+        content="Custom-crafted website pricing proposal by GrowthHex Digital. Side-by-side comparison of static multi-page standard and fully dynamic options.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg-deep: #f8fafc;
+            --bg-card: #ffffff;
+            --bg-glass: rgba(255, 255, 255, 0.85);
+            --border: rgba(15, 23, 42, 0.08);
+            --border-glow: rgba(234, 88, 12, 0.25);
+            --accent: #ea580c;
+            --accent-2: #f97316;
+            --accent-glow: rgba(234, 88, 12, 0.08);
+            --green: #16a34a;
+            --blue: #0284c7;
+            --purple: #7c3aed;
+            --text-primary: #0f172a;
+            --text-muted: #475569;
+            --text-dim: #64748b;
+            --gradient-hero: linear-gradient(135deg, #ea580c 0%, #f97316 40%, #fdb777 100%);
+            --gradient-card: linear-gradient(145deg, rgba(234, 88, 12, 0.03) 0%, rgba(255, 255, 255, 0) 60%);
+            --radius: 16px;
+            --radius-lg: 24px;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-deep);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            line-height: 1.6;
+            width: 100%;
+        }
+
+        /* Noise Overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.025;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            padding: 0 clamp(16px, 5vw, 64px);
+        }
+
+        .nav-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+        }
+
+        .nav-logo {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+            font-size: 1.35rem;
+            background: var(--gradient-hero);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.5px;
+            text-decoration: none;
+        }
+
+        .nav-logo:hover {
+            opacity: 0.9;
+        }
+
+        .nav-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 14px;
+            border-radius: 8px;
+            transition: color 0.2s, background 0.2s;
+            border: 1px solid var(--border);
+        }
+
+        .nav-back:hover {
+            color: var(--text-primary);
+            background: rgba(0, 0, 0, 0.03);
+        }
+
+        main {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 40px clamp(16px, 5vw, 64px);
+            position: relative;
+            z-index: 1;
+        }
+
+        /* HERO PROPOSAL SECTION */
+        .proposal-hero {
+            position: relative;
+            background: linear-gradient(135deg, rgba(234, 88, 12, 0.04) 0%, rgba(241, 245, 249, 0.8) 100%);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 48px;
+            margin-bottom: 40px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.02);
+        }
+
+        .proposal-hero-glow {
+            position: absolute;
+            right: -10%;
+            top: -20%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(249, 115, 22, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .proposal-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(249, 115, 22, 0.1);
+            border: 1px solid rgba(249, 115, 22, 0.25);
+            color: var(--accent-2);
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 100px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .proposal-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: -1px;
+            margin-bottom: 16px;
+        }
+
+        .proposal-title span {
+            background: var(--gradient-hero);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .proposal-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            margin-top: 24px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        .proposal-meta-item strong {
+            color: var(--text-primary);
+        }
+
+        /* PERSONALIZATION BLOCK */
+        .personalize-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 4px 20px rgba(15, 23, 42, 0.02);
+        }
+
+        justify-content: space-between;
+        gap: 20px;
+        flex-wrap: wrap;
+        }
+
+        .personalize-info h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .personalize-info p {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+        }
+
+        .personalize-input-wrapper {
+            flex-grow: 1;
+            max-width: 400px;
+            min-width: 250px;
+            position: relative;
+        }
+
+        .personalize-input {
+            width: 100%;
+            background: var(--bg-deep);
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+            padding: 12px 16px;
+            border-radius: 10px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .personalize-input:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 2px var(--accent-glow);
+        }
+
+        /* SIDE-BY-SIDE CARDS */
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 32px;
+            margin-bottom: 56px;
+        }
+
+        .option-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.03), 0 1px 3px rgba(15, 23, 42, 0.02);
+        }
+
+        .option-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--gradient-card);
+            pointer-events: none;
+        }
+
+        .option-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--border-glow);
+            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+        }
+
+        .option-card.recommended {
+            border-color: rgba(234, 88, 12, 0.3);
+            background: linear-gradient(145deg, rgba(234, 88, 12, 0.03) 0%, var(--bg-card) 50%);
+        }
+
+        .rec-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--accent);
+            color: #fff;
+            font-size: 0.65rem;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 100px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .card-heading {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        .card-price-row {
+            margin: 16px 0 24px;
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+        }
+
+        .price-currency {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--accent);
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .price-amount {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--text-primary);
+            font-family: 'Outfit', sans-serif;
+            letter-spacing: -2px;
+        }
+
+        .price-subtext {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+        }
+
+        .features-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            flex-grow: 1;
+            margin-bottom: 32px;
+        }
+
+        .features-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        .feature-icon {
+            flex-shrink: 0;
+            width: 20px;
+            height: 20px;
+            background: rgba(34, 197, 94, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.65rem;
+            color: var(--green);
+            margin-top: 1px;
+            border: 1px solid rgba(34, 197, 94, 0.2);
+        }
+
+        .feature-icon.blue-icon {
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--blue);
+            border-color: rgba(56, 189, 248, 0.2);
+        }
+
+        .cta-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 0.92rem;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.25s;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .cta-primary {
+            background: var(--accent);
+            color: #fff;
+        }
+
+        .cta-primary:hover {
+            background: var(--accent-2);
+            transform: translateY(-1px);
+        }
+
+        .cta-secondary {
+            background: transparent;
+            color: var(--text-primary);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .cta-secondary:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* TARGET INDUSTRIES SECTION */
+        .industries-section {
+            margin-bottom: 56px;
+        }
+
+        .industries-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 32px;
+            max-width: 700px;
+        }
+
+        .industry-category-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px;
+            position: relative;
+            overflow: hidden;
+            transition: border-color 0.25s, box-shadow 0.25s;
+        }
+
+        .industry-category-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--gradient-card);
+            pointer-events: none;
+        }
+
+        .industry-category-card:hover {
+            border-color: rgba(249, 115, 22, 0.25);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .industry-cat-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding-bottom: 10px;
+        }
+
+        .badge-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .industry-badge {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 100px;
+            transition: all 0.2s ease;
+            cursor: default;
+        }
+
+        .industry-badge:hover {
+            border-color: var(--accent);
+            color: var(--text-primary);
+            background: rgba(249, 115, 22, 0.05);
+            transform: translateY(-1px);
+        }
+
+        /* COMPARISON TABLE */
+        .comparison-section {
+            margin-bottom: 56px;
+        }
+
+        .section-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .table-wrapper {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.88rem;
+        }
+
+        th,
+        td {
+            padding: 18px 24px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        th {
+            background: rgba(255, 255, 255, 0.02);
+            color: var(--text-primary);
+            font-weight: 600;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .td-feature {
+            font-weight: 500;
+            color: var(--text-primary);
+            width: 30%;
+        }
+
+        .td-val {
+            color: var(--text-muted);
+        }
+
+        .td-highlight {
+            color: var(--accent-2);
+            font-weight: 600;
+        }
+
+        /* COMMON INCLUSIONS BLOCK */
+        .common-inclusions {
+            background: rgba(255, 255, 255, 0.01);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            margin-bottom: 56px;
+        }
+
+        .common-inclusions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 24px;
+            margin-top: 24px;
+        }
+
+        .common-item {
+            display: flex;
+            gap: 12px;
+        }
+
+        .common-item-icon {
+            font-size: 1.2rem;
+            line-height: 1.2;
+        }
+
+        .common-item-title {
+            font-weight: 600;
+            margin-bottom: 4px;
+            font-size: 0.92rem;
+            color: var(--text-primary);
+        }
+
+        .common-item-desc {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        /* INTERACTIVE SELECTOR / CALCULATOR */
+        .calculator-card {
+            background: linear-gradient(135deg, rgba(234, 88, 12, 0.05) 0%, rgba(255, 255, 255, 0.95) 100%);
+            border: 1px solid rgba(234, 88, 12, 0.2);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            margin-bottom: 56px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.03);
+        }
+
+        .calc-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .calc-header h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 800;
+            letter-spacing: -0.3px;
+        }
+
+        .calc-body {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+        }
+
+        @media (max-width: 768px) {
+            .calc-body {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .calc-selector {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .selector-option {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 16px 20px;
+            border-radius: 12px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.2s ease;
+        }
+
+        .selector-option:hover {
+            border-color: rgba(255, 255, 255, 0.15);
+            transform: translateX(4px);
+        }
+
+        .selector-option.selected {
+            border-color: var(--accent);
+            background: rgba(249, 115, 22, 0.05);
+            box-shadow: 0 0 12px rgba(249, 115, 22, 0.1);
+        }
+
+        .sel-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .radio-circle {
+            width: 18px;
+            height: 18px;
+            border: 2px solid var(--text-dim);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .selector-option.selected .radio-circle {
+            border-color: var(--accent);
+        }
+
+        .selector-option.selected .radio-circle::after {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background-color: var(--accent);
+            border-radius: 50%;
+        }
+
+        .sel-name {
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .sel-price {
+            font-weight: 700;
+            font-family: 'Outfit', sans-serif;
+            color: var(--text-primary);
+        }
+
+        .calc-summary {
+            background: rgba(0, 0, 0, 0.015);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .sum-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.88rem;
+            color: var(--text-muted);
+        }
+
+        .sum-row.total {
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            font-weight: 700;
+            border-top: 1px solid var(--border);
+            padding-top: 16px;
+        }
+
+        .sum-row.total .price-amount-sm {
+            font-size: 2rem;
+            font-family: 'Outfit', sans-serif;
+            color: var(--accent-2);
+            font-weight: 800;
+        }
+
+        /* POLICY/NOTICE BANNER */
+        .policy-strip {
+            background: rgba(56, 189, 248, 0.05);
+            border: 1px solid rgba(56, 189, 248, 0.15);
+            border-radius: 12px;
+            padding: 16px 24px;
+            font-size: 0.82rem;
+            color: #7dd3fc;
+            margin-bottom: 56px;
+            line-height: 1.6;
+        }
+
+        .policy-strip strong {
+            color: #38bdf8;
+        }
+
+        /* FOOTER */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 40px 0;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        footer .footer-logo {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 900;
+            font-size: 1.5rem;
+            background: var(--gradient-hero);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 12px;
+        }
+
+        footer p {
+            color: var(--text-dim);
+            font-size: 0.8rem;
+            line-height: 1.7;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* PRINT STYLING (Ctrl+P) */
+        @media print {
+            body {
+                background: var(--bg-deep) !important;
+                color: var(--text-primary) !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            main {
+                padding: 20px;
+            }
+
+            .proposal-hero {
+                background: linear-gradient(135deg, rgba(234, 88, 12, 0.04) 0%, rgba(241, 245, 249, 0.8) 100%) !important;
+                border: 1px solid var(--border) !important;
+                color: var(--text-primary) !important;
+            }
+
+            .proposal-title span {
+                -webkit-text-fill-color: initial !important;
+                color: var(--text-primary) !important;
+            }
+
+            .personalize-card,
+            nav,
+            .calc-body,
+            .calculator-card,
+            .cta-btn,
+            footer {
+                display: none !important;
+            }
+
+            .options-grid {
+                display: flex !important;
+                gap: 20px !important;
+            }
+
+            .option-card {
+                background: var(--bg-card) !important;
+                color: var(--text-primary) !important;
+                border: 1px solid var(--border) !important;
+                margin-bottom: 0px !important;
+                break-inside: avoid;
+                page-break-inside: avoid;
+                padding: 32px !important;
+                flex: 1 !important;
+            }
+
+            .price-amount {
+                color: var(--text-primary) !important;
+            }
+
+            .features-list li {
+                color: var(--text-muted) !important;
+            }
+
+            .feature-icon {
+                border-color: var(--green) !important;
+                color: var(--green) !important;
+            }
+
+            .feature-icon.blue-icon {
+                border-color: var(--blue) !important;
+                color: var(--blue) !important;
+            }
+
+            .table-wrapper {
+                background: var(--bg-card) !important;
+                border: 1px solid var(--border) !important;
+            }
+
+            th,
+            td {
+                border-bottom: 1px solid var(--border) !important;
+                color: var(--text-primary) !important;
+            }
+
+            th {
+                background: rgba(15, 23, 42, 0.02) !important;
+            }
+
+            .td-feature {
+                color: var(--text-primary) !important;
+            }
+
+            .td-val {
+                color: var(--text-muted) !important;
+            }
+
+            .td-highlight {
+                color: var(--accent) !important;
+            }
+
+            .common-inclusions {
+                background: var(--bg-card) !important;
+                border: 1px solid var(--border) !important;
+                color: var(--text-primary) !important;
+            }
+
+            .common-item-title {
+                color: var(--text-primary) !important;
+            }
+
+            .common-item-desc {
+                color: var(--text-muted) !important;
+            }
+
+            .industry-category-card {
+                background: var(--bg-card) !important;
+                color: var(--text-primary) !important;
+                border: 1px solid var(--border) !important;
+                margin-bottom: 16px !important;
+                padding: 24px !important;
+            }
+
+            .industry-badge {
+                border: 1px solid var(--border) !important;
+                color: var(--text-muted) !important;
+                background: rgba(0, 0, 0, 0.02) !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">GrowthHex•Digital</a>
+            <a href="index.html" class="nav-back">← All Proposals</a>
+        </div>
+    </nav>
+
+    <!-- MAIN -->
+    <main>
+
+        <!-- PROPOSAL HERO -->
+        <section class="proposal-hero">
+            <div class="proposal-hero-glow"></div>
+            <div class="proposal-tag">📄 Official Price Proposal</div>
+            <h1 class="proposal-title">
+                Website Standard Development<br>
+                <span id="clientTitle">Prepared for: Valued Client</span>
+            </h1>
+            <p style="color: var(--text-muted); margin-bottom: 24px; font-size: 1rem; max-width: 650px;">
+                A tailored design & technology proposal outlining static & dynamic options custom-coded for Jaipur's
+                top-tier operational metrics. Zero boilerplate, maximum speed.
+            </p>
+            <div class="proposal-meta">
+                <div class="proposal-meta-item">Lead Architect: <strong>Saurav Kumawat Badiwaal</strong></div>
+                <div class="proposal-meta-item">Valid Until: <strong>July 31, 2026</strong></div>
+                <div class="proposal-meta-item">Location: <strong>Jaipur, RJ</strong></div>
+            </div>
+        </section>
+
+        <!-- CLIENT PERSONALIZATION -->
+        <div class="personalize-card">
+            <div class="personalize-info">
+                <h3>Personalize this Proposal</h3>
+                <p>Enter your business or client name to customize headings, specifications, and WhatsApp CTAs.</p>
+            </div>
+            <div class="personalize-input-wrapper">
+                <input type="text" id="clientNameInput" class="personalize-input" placeholder="Enter Business Name..."
+                    value="Valued Client">
+            </div>
+        </div>
+
+        <!-- TARGET INDUSTRIES & SPECIALIZATIONS -->
+        <section class="industries-section">
+            <h2 class="section-title">🎯 Tailored Specialization Niches</h2>
+            <p class="industries-desc">
+                We design and engineer bespoke web assets optimized for specific local business categories. Whether you
+                need booking structures, fast-loading image portfolios, or lead routing, our templates are custom-coded
+                to click with your target audience instantly.
+            </p>
+
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-bottom: 24px;">
+                <!-- Event & Creative -->
+                <div class="industry-category-card">
+                    <div class="industry-cat-title">✨ Event & Creative Pros</div>
+                    <div class="badge-container">
+                        <span class="industry-badge">🎈 Balloon Decoration</span>
+                        <span class="industry-badge">🎉 Event Decoration</span>
+                        <span class="industry-badge">🎨 Tattoo Artists</span>
+                        <span class="industry-badge">💃 Dance Schools</span>
+                    </div>
+                </div>
+
+                <!-- Personal Portfolios & Creators -->
+                <div class="industry-category-card">
+                    <div class="industry-cat-title">💄 Creative Artists</div>
+                    <div class="badge-container">
+                        <span class="industry-badge">💄 Makeup Artists</span>
+                        <span class="industry-badge">🎸 Solo Musicians</span>
+                        <span class="industry-badge">📸 Photography Hubs</span>
+                        <span class="industry-badge">📐 Interior Designers</span>
+                    </div>
+                </div>
+
+                <!-- Local Home & Automotive -->
+                <div class="industry-category-card">
+                    <div class="industry-cat-title">🔧 Home & Auto Services</div>
+                    <div class="badge-container">
+                        <span class="industry-badge">❄️ AC Repair & Service</span>
+                        <span class="industry-badge">🔧 Car Garages</span>
+                        <span class="industry-badge">🚗 Self Drive Cars</span>
+                        <span class="industry-badge">💧 RO Service Nodes</span>
+                        <span class="industry-badge">☀️ Solar Panel Brands</span>
+                    </div>
+                </div>
+
+                <!-- Health, Food & Leisure -->
+                <div class="industry-category-card">
+                    <div class="industry-cat-title">🏥 Health & Leisure</div>
+                    <div class="badge-container">
+                        <span class="industry-badge">🦷 Dental Clinics</span>
+                        <span class="industry-badge">🏥 Physiotherapists</span>
+                        <span class="industry-badge">🌱 Homeopathic Clinics</span>
+                        <span class="industry-badge">☕ Boutique Cafes</span>
+                        <span class="industry-badge">✈️ Tour & Travels</span>
+                        <span class="industry-badge">🏨 Hotels & Resorts</span>
+                    </div>
+                </div>
+
+                <!-- Custom & Professional Services -->
+                <div class="industry-category-card">
+                    <div class="industry-cat-title">💼 Custom & Professional Services</div>
+                    <div class="badge-container">
+                        <span class="industry-badge">🛍️ Retail & E-Commerce Shops</span>
+                        <span class="industry-badge">🚀 Tech Startups & MVPs</span>
+                        <span class="industry-badge">🤝 Consulting & Coaching Agencies</span>
+                        <span class="industry-badge">🏢 Real Estate Operators</span>
+                        <span class="industry-badge">🎓 Educational Coaching Centers</span>
+                        <span class="industry-badge">🏭 Local Manufacturers & Wholesalers</span>
+                        <span class="industry-badge">✨ Any Custom Business Model</span>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                style="background: rgba(249, 115, 22, 0.05); border: 1px solid rgba(249, 115, 22, 0.15); border-radius: 12px; padding: 18px 24px; font-size: 0.85rem; color: var(--accent-2); line-height: 1.5;">
+                ⚡ <strong>Conversion Match:</strong> We integrate features specific to your niche, such as
+                high-definition image galleries for <strong>Makeup & Event Artists</strong>, click-to-call service
+                triggers for <strong>AC/RO repair operators</strong>, and database-driven contact calendars for
+                <strong>Clinics & Travels</strong>.
+            </div>
+        </section>
+
+        <!-- OPTIONS CARDS -->
+        <div class="options-grid">
+
+            <!-- OPTION 1: Static Website Standard -->
+            <div class="option-card">
+                <div class="card-heading">Static Website Standard</div>
+                <div style="font-size: 0.8rem; color: var(--accent-2); font-weight: 600; text-transform: uppercase;">
+                    Standard Multi-Page</div>
+
+                <div class="card-price-row">
+                    <span class="price-currency">₹</span>
+                    <span class="price-amount">15,000</span>
+                    <span class="price-subtext">One-Time Investment*</span>
+                </div>
+
+                <ul class="features-list">
+                    <li>
+                        <span class="feature-icon">✓</span>
+                        <span><strong>Up to 15 pages</strong> (Home, About, up to 10 services, Gallery, Contact)</span>
+                    </li>
+                    <li>
+                        <span class="feature-icon">✓</span>
+                        <span>Premium custom UI/UX design matching your brand theme</span>
+                    </li>
+                    <li>
+                        <span class="feature-icon">✓</span>
+                        <span>Full On-Page SEO (Meta tags, image ALTs, sitemap & robots configuration)</span>
+                    </li>
+                    <li>
+                        <span class="feature-icon">✓</span>
+                        <span>Floating WhatsApp & Call Now dynamic integrations</span>
+                    </li>
+                    <li>
+                        <span class="feature-icon">✓</span>
+                        <span>1 custom-designed contact form with instant email alerts</span>
+                    </li>
+                    <li>
+                        <span class="feature-icon">✓</span>
+                        <span><strong>FREE Hosting</strong> on GrowthHex common shared server</span>
+                    </li>
+                </ul>
+
+                <a href="#" id="opt1Cta" class="cta-btn cta-secondary" target="_blank">Select Static Standard</a>
+            </div>
+
+            <!-- OPTION 2: Standard Dynamic Website -->
+            <div class="option-card recommended">
+                <!-- <span class="rec-badge">Recommended</span> -->
+                <div class="card-heading">Standard Dynamic Website</div>
+                <div style="font-size: 0.8rem; color: var(--accent-2); font-weight: 600; text-transform: uppercase;">
+                    Fully Dynamic + Admin Panel</div>
+
+                <div class="card-price-row">
+                    <span class="price-currency">₹</span>
+                    <span class="price-amount">25,000</span>
+                    <span class="price-subtext">Starting Investment</span>
+                </div>
+
+                <ul class="features-list">
+                    <li>
+                        <span class="feature-icon blue-icon">✓</span>
+                        <span><strong>Minimum 25 pages</strong> with custom schema database configuration</span>
+                    </li>
+                    <li>
+                        <span class="feature-icon blue-icon">✓</span>
+                        <span><strong>Fully Customized Admin Panel</strong> (Manage services, users, blog posts,
+                            testimonials easily)</span>
+                    </li>
+                    <li>
+                        <span class="feature-icon blue-icon">✓</span>
+                        <span>Advanced On-Page SEO indexing & search console sitemaps submission</span>
+                    </li>
+                    <li>
+                        <span class="feature-icon blue-icon">✓</span>
+                        <span><strong>1 Year Premium Hosting</strong> + Free SSL certificate included</span>
+                    </li>
+                    <li>
+                        <span class="feature-icon blue-icon">✓</span>
+                        <span>Basic Admin training & <strong>5 hours dedicated technical support</strong></span>
+                    </li>
+                    <li>
+                        <span class="feature-icon blue-icon">✓</span>
+                        <span>Secure database routing for contact logs and inquiries</span>
+                    </li>
+                </ul>
+
+                <a href="#" id="opt2Cta" class="cta-btn cta-primary" target="_blank">Select Dynamic Option</a>
+            </div>
+
+        </div>
+
+        <!-- COMPARISON GRID -->
+        <section class="comparison-section">
+            <h2 class="section-title">⚖️ Side-by-Side Deep Dive</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature Checklist</th>
+                            <th>Static Website Standard (₹15,000)</th>
+                            <th>Standard Dynamic Website (₹25,000)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="td-feature">Page Count Range</td>
+                            <td class="td-val">Up to 15 custom pages</td>
+                            <td class="td-val td-highlight">25+ pages base scope</td>
+                        </tr>
+                        <tr>
+                            <td class="td-feature">Admin Panel Access</td>
+                            <td class="td-val">No (Changes via source-code edits)</td>
+                            <td class="td-val td-highlight">Yes (Admin dashboard to edit site text & items)</td>
+                        </tr>
+                        <tr>
+                            <td class="td-feature">Database System</td>
+                            <td class="td-val">None (Fast flat-file build)</td>
+                            <td class="td-val td-highlight">SQL/PostgreSQL secure backend integration</td>
+                        </tr>
+                        <tr>
+                            <td class="td-feature">Complimentary Hosting</td>
+                            <td class="td-val">GrowthHex shared server (Permanent)</td>
+                            <td class="td-val td-highlight">1st Year Included (Client ownership support after Year 1)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td-feature">Dedicated Dev Support</td>
+                            <td class="td-val">Standard launch support</td>
+                            <td class="td-val td-highlight">5 Hours dedicated block after launch</td>
+                        </tr>
+                        <tr>
+                            <td class="td-feature">SSL & Security</td>
+                            <td class="td-val">Standard HTTPS</td>
+                            <td class="td-val td-highlight">Free SSL + custom secure session tokens</td>
+                        </tr>
+                        <tr>
+                            <td class="td-feature">SEO Core Setup</td>
+                            <td class="td-val">On-Page tags & descriptions</td>
+                            <td class="td-val td-highlight">Full schema markup, XML indexation & console link</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- SHARED ARCHITECTURE VALUES -->
+        <section class="common-inclusions">
+            <h2 class="section-title" style="margin-bottom: 8px;">🏗️ GrowthHex Foundation Standards</h2>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 24px;">Both tiers include these
+                modern development standards out-of-the-box:</p>
+            <div class="common-inclusions-grid">
+
+                <div class="common-item">
+                    <div class="common-item-icon">🚀</div>
+                    <div>
+                        <div class="common-item-title">Ultra-Speed Optimization</div>
+                        <div class="common-item-desc">Pure HTML, CSS, and Vanilla JS logic. No heavy systems, no page
+                            bloat. Page speed scores > 90% guaranteed.</div>
+                    </div>
+                </div>
+
+                <div class="common-item">
+                    <div class="common-item-icon">📱</div>
+                    <div>
+                        <div class="common-item-title">Mobile-First UI/UX</div>
+                        <div class="common-item-desc">Optimized for every device viewport, offering seamless responsive
+                            layouts and finger-friendly CTAs.</div>
+                    </div>
+                </div>
+
+                <div class="common-item">
+                    <div class="common-item-icon">⚡</div>
+                    <div>
+                        <div class="common-item-title">WhatsApp & Call Nodes</div>
+                        <div class="common-item-desc">Interactive floating elements configured to open direct messaging
+                            streams on clicks.</div>
+                    </div>
+                </div>
+
+                <div class="common-item">
+                    <div class="common-item-icon">📍</div>
+                    <div>
+                        <div class="common-item-title">Location Map Embed</div>
+                        <div class="common-item-desc">Interactive Google Maps geolocation directly formatted into your
+                            site's contact modules.</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- INTERACTIVE CALCULATOR -->
+        <section class="calculator-card">
+            <div class="calc-header">
+                <div>
+                    <h3>Interactive Package Selector</h3>
+                    <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 4px;">Select a development
+                        structure to view package sums and initiate your setup.</p>
+                </div>
+            </div>
+
+            <div class="calc-body">
+                <div class="calc-selector">
+                    <div class="selector-option" onclick="selectCalcOption('static')" id="calc-static">
+                        <div class="sel-left">
+                            <div class="radio-circle"></div>
+                            <span class="sel-name">Static Website Standard (₹15,000)</span>
+                        </div>
+                        <span class="sel-price">₹15,000</span>
+                    </div>
+
+                    <div class="selector-option selected" onclick="selectCalcOption('dynamic')" id="calc-dynamic">
+                        <div class="sel-left">
+                            <div class="radio-circle"></div>
+                            <span class="sel-name">Standard Dynamic Website (₹25,000)</span>
+                        </div>
+                        <span class="sel-price">₹25,000</span>
+                    </div>
+                </div>
+
+                <div class="calc-summary">
+                    <div>
+                        <div class="sum-row">
+                            <span>Selected Project Architecture</span>
+                            <span id="sumArchitecture" style="color: var(--text-primary); font-weight: 500;">Standard
+                                Dynamic Website</span>
+                        </div>
+                        <div class="sum-row" style="margin-top: 10px;">
+                            <span>Initial Hosting & SSL Package</span>
+                            <span style="color: var(--green); font-weight: 600;">100% Complimentary</span>
+                        </div>
+                    </div>
+
+                    <div class="sum-row total">
+                        <span>Total Professional Investment</span>
+                        <div>
+                            <span id="sumTotal" class="price-amount-sm">₹25,000</span>
+                        </div>
+                    </div>
+
+                    <button class="cta-btn cta-primary" onclick="proceedToWhatsApp()" style="margin-top: 10px;">
+                        🚀 Proceed with Selected Option
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- POLICY STRIP -->
+        <div class="policy-strip">
+            <strong>🌐 Hosting & Domain Policy:</strong> Domain names are purchased directly by the client (with
+            complimentary support from our team). Static websites are hosted on <strong>GrowthHex's shared
+                server</strong>. Standard Dynamic websites include 1 year of complimentary hosting on GrowthHex's shared
+            server. Client-managed server routing is supported if requested.
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div style="max-width:1280px; margin:0 auto; padding:0 clamp(16px, 5vw, 64px);">
+            <div class="footer-logo">GrowthHex•Digital</div>
+            <p>
+                *Prices listed in this proposal are valid for Jaipur & remote operations and represent the
+                specifications listed. Complexity expansions or custom integrations beyond listed details will be
+                estimated separately.
+            </p>
+            <div style="margin-top:24px; color:var(--text-dim); font-size:0.78rem;">
+                © 2026 GrowthHex Digital. Led by Saurav Kumawat Badiwaal, Senior Technical Lead.
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE SCRIPT -->
+    <script>
+        let currentClientName = "Valued Client";
+        let selectedOption = "dynamic"; // "static" or "dynamic"
+
+        const clientInput = document.getElementById('clientNameInput');
+        const clientTitleText = document.getElementById('clientTitle');
+        const opt1Cta = document.getElementById('opt1Cta');
+        const opt2Cta = document.getElementById('opt2Cta');
+
+        function updateClientVariables() {
+            const enteredVal = clientInput.value.trim();
+            currentClientName = enteredVal ? enteredVal : "Valued Client";
+
+            // Update Title
+            clientTitleText.innerText = "Prepared for: " + currentClientName;
+
+            // Generate WhatsApp CTA URLs
+            const staticMsg = encodeURIComponent(`Hi Saurav, I'd like to proceed with the Static Website Standard package (₹15,000) for ${currentClientName}!`);
+            const dynamicMsg = encodeURIComponent(`Hi Saurav, I'd like to proceed with the Standard Dynamic Website package (₹25,000) for ${currentClientName}!`);
+
+            opt1Cta.href = `https://wa.me/918952943514?text=${staticMsg}`;
+            opt2Cta.href = `https://wa.me/918952943514?text=${dynamicMsg}`;
+        }
+
+        // Handle text input change
+        clientInput.addEventListener('input', updateClientVariables);
+
+        // Selector / Calculator Action
+        function selectCalcOption(option) {
+            selectedOption = option;
+
+            // UI Toggle
+            document.getElementById('calc-static').classList.remove('selected');
+            document.getElementById('calc-dynamic').classList.remove('selected');
+
+            document.getElementById('calc-' + option).classList.add('selected');
+
+            // Data updates
+            const sumArch = document.getElementById('sumArchitecture');
+            const sumTotal = document.getElementById('sumTotal');
+
+            if (option === 'static') {
+                sumArch.innerText = "Static Website Standard";
+                sumTotal.innerText = "₹15,000";
+            } else {
+                sumArch.innerText = "Standard Dynamic Website";
+                sumTotal.innerText = "₹25,000";
+            }
+        }
+
+        // WhatsApp dispatch from calculator
+        function proceedToWhatsApp() {
+            let msg = "";
+            if (selectedOption === 'static') {
+                msg = encodeURIComponent(`Hi Saurav, I want to proceed with the Static Website Standard option (₹15,000) for ${currentClientName}!`);
+            } else {
+                msg = encodeURIComponent(`Hi Saurav, I want to proceed with the Standard Dynamic Website option (₹25,000) for ${currentClientName}!`);
+            }
+            window.open(`https://wa.me/917742064233?text=${msg}`, '_blank');
+        }
+
+        // Initialize variables on load
+        window.onload = () => {
+            updateClientVariables();
+            selectCalcOption('dynamic');
+        };
+    </script>
+</body>
+
+</html>
