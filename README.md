@@ -17,6 +17,7 @@ Led by **Senior Technical Lead Saurav Kumawat Badiwaal**, GrowthHex Digital brid
 | `google-business-proposal.html` | Google Business Profile (GBP) Creation & Dominance Proposal | [google-business-proposal.html](file:///d:/GrowthHex/Products/google-business-proposal.html) |
 | `google-business-number-live-proposal.html` | GBP Mobile Number Verification & Live Setup Proposal | [google-business-number-live-proposal.html](file:///d:/GrowthHex/Products/google-business-number-live-proposal.html) |
 | `website-standard-proposal.html` | Custom Website Development Side-by-Side Proposal | [website-standard-proposal.html](file:///d:/GrowthHex/Products/website-standard-proposal.html) |
+| `growthhex-ai-studio-proposal.html` | GrowthHex AI Studio Video & Ad Production Proposal | [growthhex-ai-studio-proposal.html](file:///d:/GrowthHex/Products/growthhex-ai-studio-proposal.html) |
 
 ---
 
@@ -94,6 +95,35 @@ GrowthHex tailors local SEO, GMB keyword mapping, and custom web assets for top 
   * AI agent trained specifically on your business (services, pricing, FAQs, customer scenarios)
   * 24/7 automated customer responses & intelligent lead qualification
   * Seamless human handover triggers for high-intent leads
+
+---
+
+## 🎬 GrowthHex AI Studio — Premium AI Video & Ad Production
+
+*Transform concepts into cinematic, high-converting AI videos using advanced Google Flow (Veo 3 / Omni) technology. Offered in two distinct duration tiers: **Up to 30 Seconds** (quick-hit hooks, Reels, Stories) and **30 to 60 Seconds** (full narrative ads & hero teasers). Perfect for Meta Ads, Instagram Reels, and YouTube Shorts.*
+
+### 📊 2026 Market Intelligence & Price Comparison
+In the 2026 digital video market:
+* **Traditional Video Shoots:** Often start around **₹50,000+** per production due to high overheads, actors, camera crews, and studio rentals.
+* **Specialized AI Agencies in India:** Charge **₹8,000 to ₹15,000+** for a single AI ad, plus extra pass-through compute token costs.
+* **GrowthHex AI Studio:** Entry pricing starts at **₹3,000 (Up to 30s)** and **₹5,000 (30–60s)** with an introductory **50% Early Bird Discount** and **zero extra compute fees**. Hits the sweet spot—premium enough to signal agency quality, but accessible enough for growing brands and creators to test aggressively.
+
+### 💰 Introductory Pricing Packages (Dual Duration Tiers)
+
+| Package | Duration Tier | Deliverables | Standard Rate | Early Bird (50% Off) | Best For |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **The Pilot (Single 30s)** | Up to 30 sec | 1 Video | ₹6,000 | **₹3,000** | A single Meta Ad hook test or short Reel teaser. |
+| **The Pilot (Single 60s)** | 30 to 60 sec | 1 Video | ₹10,000 | **₹5,000** | Full cinematic Meta Ad or hero product story. |
+| **Creator Flow (30s)** | Up to 30 sec | 4 Videos / mo | ₹22,000 | **₹11,000 / mo** | Models and creators needing 4 fast-paced weekly Reels. |
+| **Creator Flow (60s)** | 30 to 60 sec | 4 Videos / mo | ₹38,000 | **₹19,000 / mo** | Influencers & creators needing full 60s weekly Reels. |
+| **Ad Scaler (30s)** | Up to 30 sec | 8 Videos / mo | ₹40,000 | **₹20,000 / mo** | Startups split-testing rapid 15–30s Meta ad hooks. |
+| **Ad Scaler (60s)** | 30 to 60 sec | 8 Videos / mo | ₹72,000 | **₹35,000 / mo** | D2C brands split-testing full 60s high-ROAS Meta ads. |
+
+### ⚡ What Is Included in Every Video?
+Generating professional AI video is not a simple "one-click" process. Every GrowthHex package includes the unseen labor and computing costs required to produce agency-grade content:
+* **Premium Compute Costs Covered:** High-quality Veo 3 / Omni generations require expensive Google AI Ultra subscriptions and intensive API token consumption. We absorb 100% of these platform costs across both duration tiers.
+* **Multi-Shot Engineering:** Because high-quality AI models generate video in 8-second bursts, videos require meticulous prompt engineering, stitching (2–4 bursts for 30s; 6–8 bursts for 60s), and pacing to create a seamless narrative.
+* **Complete Post-Production Polish:** Includes AI human voiceover synthesis, sound design, hook optimization, brand asset placement, dynamic captions, and multi-format exports (9:16 vertical Reels & 16:9 widescreen).
 
 ---
 

@@ -136,6 +136,43 @@ We tailor our local SEO, keyword mapping, and custom web assets for Jaipur's top
 
 ---
 
+## 🎬 GrowthHex AI Studio — Premium AI Video & Ad Production
+
+*We transform concepts into cinematic, high-converting AI videos using advanced Google Flow (Veo 3 / Omni) technology. Packages are offered in two duration tiers: **Up to 30 Seconds** (quick-hit ad hooks, Reels, Stories) and **30 to 60 Seconds** (full narrative ads & hero teasers). Perfect for Meta Ads, Instagram Reels, and YouTube Shorts.*
+
+> 🔗 **Interactive Client Proposal Portal**: Inspect active pricing tiers, duration configurators, and client personalization tools on the [GrowthHex AI Studio Standalone Proposal Page](file:///d:/GrowthHex/Products/growthhex-ai-studio-proposal.html).
+
+### 📊 2026 Market Intelligence & Price Positioning
+In the 2026 market, traditional video shoots often start around **₹50,000**, while specialized AI agencies in India charge anywhere from **₹8,000 to ₹15,000+** for a high-quality AI ad (plus recurring token/platform markup fees). By structuring our entry rate at **₹3,000 (Up to 30s)** and **₹5,000 (30–60s)** under our **50% Early Bird Discount**, GrowthHex hits the sweet spot—premium enough to signal agency-grade quality, but accessible enough for growing brands, creators, and local businesses to test aggressively.
+
+### 💰 Introductory Pricing Packages (Dual Duration Tiers)
+
+#### 1. The Pilot (Single Video Test)
+* **Up to 30 Seconds:** **₹3,000 Early Bird** *(Standard Rate: ~~₹6,000~~)*
+* **30 to 60 Seconds:** **₹5,000 Early Bird** *(Standard Rate: ~~₹10,000~~)*
+* **Best For:** Single Meta Ad hook testing or hero product teaser.
+* **Inclusions:** Concept script, prompt engineering, multi-shot generation, voiceover synthesis, and final ad render.
+
+#### 2. Creator Flow (4 Videos / Month)
+* **Up to 30 Seconds:** **₹11,000 / month Early Bird** *(Standard Rate: ~~₹22,000~~)*
+* **30 to 60 Seconds:** **₹19,000 / month Early Bird** *(Standard Rate: ~~₹38,000~~)*
+* **Best For:** Models, influencers, and creators needing 4 consistent weekly Reels.
+* **Inclusions:** Weekly video delivery, persona matching, trend-focused hooks, background audio sync, and captions.
+
+#### 3. Ad Scaler (8 Videos / Month)
+* **Up to 30 Seconds:** **₹20,000 / month Early Bird** *(Standard Rate: ~~₹40,000~~)*
+* **30 to 60 Seconds:** **₹35,000 / month Early Bird** *(Standard Rate: ~~₹72,000~~)*
+* **Best For:** Startups and D2C brands split-testing high-frequency Meta Ads.
+* **Inclusions:** A/B creative hook testing variants, call-to-action overlays, high-converting ad layouts, and performance review.
+
+### ⚙️ What Is Included in Every Video?
+Generating professional AI video is not a simple "one-click" process. Every GrowthHex package includes the unseen labor and computing costs required to produce agency-grade content:
+* **Premium Compute Costs Covered:** High-quality Veo 3 / Omni generations require expensive Google AI Ultra subscriptions and intensive API token consumption. We absorb 100% of these platform costs across both duration tiers.
+* **Multi-Shot Engineering:** Because high-quality AI models generate video in 8-second bursts, a video requires meticulous prompt engineering, stitching (2–4 bursts for 30s; 6–8 bursts for 60s), and pacing to create a seamless narrative.
+* **Full Audio-Visual Production:** AI human voiceovers, ambient background audio, dynamic subtitles, brand watermark integration, and vertical (9:16) & horizontal (16:9) renders.
+
+---
+
 ## 📱 App Development & Custom Software Architecture
 
 *We engineer complex business logic into functional, scalable products in weeks, not months.*
